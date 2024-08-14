@@ -1,0 +1,70 @@
+<!-- Table => <table>
+Table row => <tr>
+Table heading => <th>
+Table data => <td>
+Merge row =>  rowspan=”2”
+column row =>  colspan=”2”
+
+table header => <thead>
+table body => <tbody>
+table footer => <tfoot>
+caption => <caption> -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <table
+      border="1"
+      style="border-collapse: collapse; text-align: center"
+      cellspacing="10"
+      cellpadding="5"
+      align="center"
+    >
+      <caption style="caption-side: bottom">
+        Tops technologies students data
+      </caption>
+      <thead>
+        <tr>
+          <th colspan="3">Students data</th>
+        </tr>
+        <tr>
+          <th>Name</th>
+          <th>City</th>
+          <th>Course</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Jay</td>
+          <td>Rajkot</td>
+          <td>Website Designing</td>
+        </tr>
+        <tr>
+          <td>Vijay</td>
+          <td>Surat</td>
+          <td>Frontend</td>
+        </tr>
+        <tr>
+          <td>Sanjay</td>
+          <td rowspan="2">Baroda</td>
+          <td>Backend</td>
+        </tr>
+        <tr>
+          <td>Ajay</td>
+          <td>Testing</td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <td colspan="2">Total students</td>
+          <td>4</td>
+        </tr>
+      </tfoot>
+    </table>
+  </body>
+</html>
