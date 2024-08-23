@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      form {
+        width: fit-content;
+        margin: 50px auto;
+      }
+      #submit {
+        display: block;
+        margin: 0 auto;
+      }
+    </style>
+  </head>
+  <body>
+    <form action="" id="candidate">
+      <fieldset>
+        <legend>Personal Information</legend>
+        <label for="name">Name: </label>
+        <input
+          type="text"
+          name=""
+          id="name"
+          class="some"
+          placeholder="Enter your name"
+          required
+          minlength="3"
+          maxlength="20"
+        />
+        <br />
+        <label for="email">Email: </label>
+        <input
+          type="email"
+          name=""
+          id="email"
+          placeholder="Enter your email"
+          required
+        />
+        <br />
+        <label for="pass">Password: </label>
+        <input
+          type="password"
+          name=""
+          id="pass"
+          placeholder="Enter your Password"
+          required
+          maxlength="16"
+          minlength="8"
+        />
+        <br />
+        <label for="dob">Date of Birth: </label>
+        <input type="date" name="" id="dob" required />
+        <br />
+        Gender:
+        <label for="male">Male</label>
+        <input type="radio" name="gender" id="male" />
+        <label for="female">Female</label>
+        <input type="radio" name="gender" id="female" />
+        <br />
+        <label for="phone">Phone: </label>
+        <input type="tel" name="" id="phone" required />
+      </fieldset>
+      <br />
+      <fieldset>
+        <legend>Professional information</legend>
+        <label for="city">City: </label>
+        <select name="" id="city">
+          <option value="brd">Baroda</option>
+          <option value="rjt" selected>Rajkot</option>
+          <option value="srt">Surat</option>
+          <option value="abd">Ahmedabad</option>
+          <option value="mbm" disabled>Mumbai</option>
+        </select>
+        <br />
+        <label for="clg">Collage: </label>
+        <input
+          type="text"
+          name=""
+          id="clg"
+          placeholder="Enter your collage name"
+          list="clg-list"
+        />
+        <datalist id="clg-list">
+          <option value="Atmiya">Atmiya University</option>
+          <option value="Marwadi">Marwadi University</option>
+          <option value="RK">RK University</option>
+          <option value="Darshan">Darshan University</option>
+          <option value="Saurastra">Saurastra University</option>
+        </datalist>
+        <br />
+        <label for="cgpa">CGPA: </label>
+        <input type="number" name="" id="cgpa" step="0.1" max="9.8" min="6.5" />
+        <br />
+        <label for="resume">Resume: </label>
+        <input type="file" name="" id="" required accept=".pdf" />
+        <br />
+
+        Hobby:
+        <input type="checkbox" name="" id="gaming" checked />
+        <label for="gaming">Gaming</label>
+        <input type="checkbox" name="" id="exercise" />
+        <label for="exercise">exercise</label>
+        <input type="checkbox" name="" id="cooking" />
+        <label for="cooking">Cooking</label>
+        <input type="checkbox" name="" id="driving" />
+        <label for="driving">Driving</label>
+        <br />
+        <label for="intro" form="candidate">Tell me about your self: </label>
+        <br />
+        <textarea
+          name=""
+          cols="25"
+          rows="5"
+          id="intro"
+          placeholder="Tell me about yourself"
+        ></textarea>
+        <input type="submit" name="" id="submit" />
+      </fieldset>
+    </form>
+  </body>
+</html>
