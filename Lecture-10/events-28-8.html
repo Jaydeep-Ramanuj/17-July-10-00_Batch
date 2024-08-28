@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input
+      type="text"
+      name=""
+      id=""
+      placeholder="Enter your name"
+      onfocus="console.log('Input focused')"
+      onclick="console.log('Input clicked')"
+      onchange="console.log('Input changed')"
+      oninput="console.log(this.value)"
+    />
+    <button onclick="console.log('Btn clicked');">Click single time</button>
+    <button ondblclick="console.log('Btn double clicked');">
+      Click two times
+    </button>
+
+    <script>
+      let btn = document.getElementsByTagName('button')[0];
+
+      //   btn.addEventListener('click', () => {
+      //     console.log('Btn clicked');
+      //   });
+
+      //   btn.addEventListener('dblclick', () => {
+      //     console.log('Btn double clicked');
+      //   });
+    </script>
+  </body>
+</html>
