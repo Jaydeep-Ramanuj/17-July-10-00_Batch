@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* tag / type selector, it is used to select element based on their tag name. When we use it, it will apply same style all tags of same type  */
+      p {
+        color: red;
+      }
+
+      u {
+        background-color: violet;
+      }
+      span {
+        color: turquoise;
+      }
+
+      /* class selector (.), single class can be used in multiple elements as well as single element can have multiple class */
+      .blue {
+        color: blue;
+        font-weight: 600;
+      }
+
+      .cursive {
+        font-family: fantasy;
+      }
+
+      .big {
+        font-size: 24px;
+      }
+
+      /* id selector (#), it is used to uniquely identify an element, it is used only once in whole document. We can't use more than one id in single element*/
+      #para {
+        color: yellowgreen;
+      }
+
+      /* universal selector (*), it is used to select every element in document */
+
+      * {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      }
+
+      /* group selector (,), it is used when we want to apply same style on multiple selector */
+      p,
+      i {
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+  <body>
+    <p class="big">This is p tag</p>
+    <i class="blue big">This is i tag</i>
+    <u>This is u tag</u>
+    <p class="blue" id="para">This is second p tag</p>
+    <span>This is span tag</span>
+  </body>
+</html>

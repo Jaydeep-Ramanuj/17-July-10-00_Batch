@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .parent {
+        /* these are some properties which will be inherited to children */
+
+        color: white;
+        font-size: 18px;
+        font-weight: 600;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
+          'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        text-align: center;
+
+        /* here are some properties which will not be inherited */
+        border: 3px solid black;
+        padding: 30px;
+        background-color: turquoise;
+      }
+
+      .child1 {
+        background-color: red;
+        border: 3px solid rgb(26, 45, 210);
+      }
+      .child2 {
+        background-color: yellowgreen;
+        border: inherit;
+      }
+      .child3 {
+        color: orangered;
+        background-color: violet;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="parent">
+      <div class="child1">Child 1</div>
+      <div class="child2">Child 2</div>
+      <div class="child3">Child 3</div>
+    </div>
+  </body>
+</html>
