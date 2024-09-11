@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* combinator selector(no-space or symbol), it is used when wqe want to use combination of multiple selectors  */
+
+      /* p#paragraph.para { */
+      /* p.para.some { */
+      .para.some {
+        color: red;
+      }
+
+      /* child selector (>), it is used to select direct child of any element */
+
+      /* .parent > .child { */
+      /* .parent > .sub-child { */
+      .parent > * {
+        border: 1px solid red;
+        margin: 3px;
+      }
+
+      /* descendent selector, it is used when want to select a descendent element regardless of their level */
+
+      /* .parent .sub-child { */
+      /* .parent .child { */
+      .parent * {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <p class="para some" id="paragraph">This is p tag</p>
+    <i>This is i tag</i>
+    <b class="para">This is b tag</b>
+    <p>This is second p tag</p>
+
+    <p class="para">This is p third tag</p>
+
+    <hr />
+
+    <div class="parent">
+      <div class="child">
+        child1
+        <div class="sub-child">sub-child1</div>
+        <div class="sub-child">sub-child2</div>
+        <div class="sub-child">sub-child3</div>
+      </div>
+      <div class="child">
+        child2
+        <div class="sub-child">sub-child1</div>
+        <div class="sub-child">
+          sub-child2
+          <div class="sub-child">Sub-child --</div>
+        </div>
+        <div class="sub-child">sub-child3</div>
+      </div>
+      <div class="child">
+        child3
+        <div class="sub-child">sub-child1</div>
+        <div class="sub-child">sub-child2</div>
+        <div class="sub-child">sub-child3</div>
+      </div>
+      <div class="sub-child">Sub-child</div>
+    </div>
+  </body>
+</html>
