@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* absolute units */
+      /* px */
+
+      /* relative units */
+      /* %, em, rem, vh, vw, etc */
+
+      html {
+        font-size: 10px;
+      }
+
+      .parent {
+        /* width: 300px; */
+        /* width: 70%; */
+        width: 600px;
+        height: 300px;
+        background-color: tomato;
+
+        font-size: 32px;
+      }
+
+      .child {
+        /* width: 50%; */
+        width: 50vw;
+        height: 200px;
+        height: 20vh;
+
+        margin-top: 30px;
+        background-color: yellowgreen;
+
+        /* font-size: 16px; */
+        font-size: 1em;
+        font-size: 1.5em;
+        font-size: 2em;
+        font-size: 2em;
+      }
+
+      .sub-child {
+        /* height: 50px;
+        width: 100px; */
+        padding: 10px;
+        font-size: 2rem;
+        background-color: teal;
+
+        /* width: 20rem; */
+        /* width: 20ch; */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="parent">
+      Parent
+      <div class="child">
+        Child
+        <div class="sub-child">Sub-child</div>
+      </div>
+    </div>
+  </body>
+</html>
