@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .box {
+        height: 300px;
+        width: 300px;
+        background-color: tomato;
+        border-radius: 12px;
+        margin: 50px auto;
+
+        position: relative;
+      }
+
+      .box::before {
+        /* content: 'Before'; */
+        content: ' ';
+        height: 10%;
+        width: 3px;
+        background-color: blue;
+
+        position: absolute;
+        left: -5px;
+        transition: all 300ms;
+      }
+      /* .box::after {
+        content: 'After';
+      } */
+
+      .box:hover::before {
+        height: 100%;
+      }
+
+      li {
+        list-style: none;
+      }
+
+      li::before {
+        /* content: '-'; */
+        /* content: '\21A3'; */
+        content: '\261B';
+        color: blue;
+      }
+      li::after {
+        content: '\21A4';
+      }
+
+      .container {
+        height: 400px;
+        width: 400px;
+        background-image: url(https://images.pexels.com/photos/27731706/pexels-photo-27731706/free-photo-of-a-close-up-of-a-white-and-pink-flower.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+        border-radius: 12px;
+        margin: 50px auto;
+        color: white;
+        font-size: 32px;
+        font-weight: 600;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        position: relative;
+
+        isolation: isolate;
+      }
+
+      .container::before {
+        content: '';
+        height: 100%;
+        width: 100%;
+        border-radius: 12px;
+        background-color: rgba(0, 0, 0, 0.34);
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+      }
+
+      a {
+        text-decoration: none;
+        margin-left: 20px;
+        color: black;
+        font-family: Arial, Helvetica, sans-serif;
+        position: relative;
+      }
+      a::before {
+        content: '';
+        width: 0%;
+        height: 2px;
+        background-color: tomato;
+        position: absolute;
+        bottom: -3px;
+        left: 0;
+
+        transition: all 300ms;
+      }
+
+      a:hover {
+        color: blue;
+      }
+
+      a:hover::before {
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">Box</div>
+
+    <ul>
+      <li>Item 1</li>
+      <li>Item 2</li>
+      <li>Item 3</li>
+    </ul>
+
+    &copy;
+
+    <div class="container">Nature is Awesome</div>
+
+    <a href="#">Home</a>
+    <a href="#">Product</a>
+    <a href="#">Career</a>
+  </body>
+</html>
