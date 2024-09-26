@@ -1,0 +1,21 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --bg-primary-color: #fefefe;
+  --bg-secondary-color: #000000;
+  --bg-tertiary-color: #f3f3f3;
+
+  --text-primary-color: #000000;
+  --text-secondary-color: #7b7b7b;
+  --text-tertiary-color: #f8f8f8;
+
+  --theme-color: #d54745;
+  --special-color: #00fe60;
+
+  --section-padding: 0px 100px;
+  --section-gap: 50px;
+}
