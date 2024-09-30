@@ -78,12 +78,12 @@
 }
 
 .product-card {
-  max-width: 230px;
+  min-width: 220px;
   position: relative;
 }
 
 .product-card .card-top {
-  height: 70%;
+  height: 55%;
   width: 100%;
   padding: 30px;
   border-radius: 5px;
@@ -179,6 +179,14 @@
 .product-card .card-options .eye-icon {
   margin-top: 5px;
 }
+
+hr {
+  margin: var(--section-padding);
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border: 1px solid var(--bg-tertiary-color);
+}
+
 header {
 }
 
@@ -187,7 +195,6 @@ header .top-header {
   color: var(--text-tertiary-color);
   text-align: center;
   padding: 5px 0px;
-
   font-size: 14px;
 }
 
@@ -374,4 +381,58 @@ header nav .nav-wrapper .options .search-bar i {
 
 #flash-sale-section .number:nth-child(1) h3::before {
   content: '';
+}
+
+#flash-sale-section .product-list,
+#best-selling-section .product-list {
+  display: flex;
+  margin-top: 20px;
+  gap: 30px;
+  overflow-y: auto;
+  scrollbar-width: thin;
+}
+
+#flash-sale-section .btn {
+  margin: 0 auto;
+  margin-top: 30px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+#category-section {
+  padding: var(--section-padding);
+  margin-top: var(--section-gap);
+}
+
+#category-section .categories-list .category {
+  height: 150px;
+  width: 150px;
+  border-radius: 5px;
+  border: 2px solid lightgray;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: grey;
+  transition: all 300ms;
+}
+
+#category-section .categories-list {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+#category-section .categories-list .category i {
+  font-size: 56px;
+}
+
+#category-section .categories-list .category:hover {
+  background-color: var(--theme-color);
+  color: white;
+}
+
+#best-selling-section {
+  padding: var(--section-padding);
+  margin-top: var(--section-gap);
 }
