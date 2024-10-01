@@ -436,3 +436,151 @@ header nav .nav-wrapper .options .search-bar i {
   padding: var(--section-padding);
   margin-top: var(--section-gap);
 }
+
+/* #explore-products-section */
+
+#explore-products-section {
+  padding: var(--section-padding);
+  margin-top: var(--section-gap);
+}
+
+#explore-products-section .product-list {
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+#explore-products-section .product-list .product-card .sale-pill {
+  background-color: var(--special-color);
+}
+
+#explore-products-section .btn {
+  margin: 0 auto;
+}
+
+/* #new-arrivals-section */
+#new-arrivals-section {
+  padding: var(--section-padding);
+  margin-top: var(--section-gap);
+}
+
+#new-arrivals-section .image-gallary {
+  margin-top: 30px;
+  height: 500px;
+  display: flex;
+  gap: 20px;
+}
+
+#new-arrivals-section .image-gallary .right {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+#new-arrivals-section .image-gallary .right .bottom {
+  display: flex;
+  gap: 20px;
+}
+
+#new-arrivals-section .image-gallary .product {
+  border-radius: 3px;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: start;
+  color: whitesmoke;
+}
+
+#new-arrivals-section .image-gallary .product .product-title {
+  font-size: 24px;
+  font-weight: 600;
+}
+
+#new-arrivals-section .image-gallary .product .product-desc {
+  max-width: 70%;
+  color: rgb(192, 192, 192);
+}
+
+#new-arrivals-section .image-gallary .product a {
+  color: whitesmoke;
+}
+
+#new-arrivals-section .image-gallary .left {
+  background-color: #000000;
+  background-image: url(../images/ps5-slim-goedkope-playstation_large\ 1.png);
+  height: 100%;
+  width: 600px;
+  max-width: 550px;
+  background-size: cover;
+  background-position: 40% 50%;
+}
+#new-arrivals-section .image-gallary .right {
+  flex-grow: 1;
+}
+
+#new-arrivals-section .image-gallary .right .top {
+  background-image: url(../images/attractive-woman-wearing-hat-posing-black-background\ 1.png);
+  height: 250px;
+  background-position: right;
+  background-size: cover;
+}
+
+#new-arrivals-section .image-gallary .right .bottom-left {
+  background-color: #252525;
+  background-image: url(../images/69-694768_amazon-echo-png-clipart-transparent-amazon-echo-png\ 1.png);
+  height: 250px;
+  flex-grow: 1;
+  background-position: 15% 50%;
+  background-size: cover;
+}
+#new-arrivals-section .image-gallary .right .bottom-right {
+  gap: 0px;
+  background-color: #252525;
+  background-image: url(../images/652e82cd70aa6522dd785109a455904c.png);
+  height: 250px;
+  flex-grow: 1;
+  background-position: 15% 50%;
+  background-size: cover;
+}
+
+/* #services-section */
+
+#services-section {
+  padding: var(--section-padding);
+  margin-top: var(--section-gap);
+
+  display: flex;
+  justify-content: space-evenly;
+}
+
+#services-section .service {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+#services-section .service .icon {
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  background-color: #bfbebf;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#services-section .service .icon .inner-circle {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  background-color: black;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+}
