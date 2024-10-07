@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      body {
+        background-color: lightgray;
+      }
+
+      .loader-bar {
+        height: 200px;
+        width: 200px;
+        border-radius: 50%;
+        margin: 100px auto;
+        background-color: whitesmoke;
+        /* border-top: 10px solid black; */
+        border: 10px solid transparent;
+        border-top-color: black;
+        border-bottom-color: black;
+        border-left-color: blue;
+        border-right-color: blue;
+
+        animation-name: rotate;
+        animation-duration: 900ms;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+      }
+
+      @keyframes rotate {
+        from {
+          transform: rotate(0deg);
+        }
+        to {
+          transform: rotate(360deg);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="loader-bar"></div>
+  </body>
+</html>
