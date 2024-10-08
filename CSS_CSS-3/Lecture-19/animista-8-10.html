@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        background-color: tomato;
+      }
+      .box {
+        height: 100px;
+        width: 100px;
+        background-color: tomato;
+        border-radius: 12px;
+        margin: 50px auto;
+
+        font-size: 64px;
+      }
+
+      .scale-up-center {
+        /* animation: scale-up-center 0.4s cubic-bezier(0.39, 0.575, 0.565, 1) both; */
+        animation-name: scale-up-center;
+        animation-duration: 300ms;
+        animation-timing-function: ease-in-out;
+        animation-iteration-count: 10;
+        animation-direction: alternate;
+      }
+
+      .rotate-bl {
+        animation: rotate-bl 0.8s infinite
+          cubic-bezier(0.455, 0.03, 0.515, 0.955) both;
+      }
+
+      .rotate-scale-up-diag-2 {
+        animation: rotate-scale-up-diag-2 0.7s linear both;
+      }
+      .text {
+        margin: 150px auto;
+        text-align: center;
+        font-size: 64px;
+        font-weight: 800;
+        font-family: Arial, Helvetica, sans-serif;
+        color: whitesmoke;
+      }
+      .tracking-in-contract-bck-bottom {
+        animation: tracking-in-contract-bck-bottom 1s
+          cubic-bezier(0.215, 0.61, 0.355, 1) both;
+      }
+
+      .text-pop-up-top {
+        animation: text-pop-up-top 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94)
+          both;
+      }
+
+      .vibrate-1 {
+        animation: vibrate-1 0.3s linear infinite both;
+      }
+      @keyframes scale-up-center {
+        0% {
+          transform: scale(0.5);
+        }
+        100% {
+          transform: scale(1);
+        }
+      }
+
+      @keyframes rotate-bl {
+        0% {
+          transform: rotate(0);
+          transform-origin: bottom left;
+        }
+        100% {
+          transform: rotate(360deg);
+          transform-origin: bottom left;
+        }
+      }
+
+      @keyframes rotate-scale-up-diag-2 {
+        0% {
+          transform: scale(1) rotate3d(-1, 1, 0, 0deg);
+        }
+        50% {
+          transform: scale(2) rotate3d(-1, 1, 0, 180deg);
+        }
+        100% {
+          transform: scale(1) rotate3d(-1, 1, 0, 360deg);
+        }
+      }
+
+      @keyframes tracking-in-contract-bck-bottom {
+        0% {
+          letter-spacing: 1em;
+          transform: translateZ(400px) translateY(300px);
+          opacity: 0;
+        }
+        40% {
+          opacity: 0.6;
+        }
+        100% {
+          transform: translateZ(0) translateY(0);
+          opacity: 1;
+        }
+      }
+
+      @keyframes text-pop-up-top {
+        0% {
+          transform: translateY(0);
+          transform-origin: 50% 50%;
+          text-shadow: none;
+        }
+        100% {
+          transform: translateY(-50px);
+          transform-origin: 50% 50%;
+          text-shadow: 0 1px 0 #cccccc, 0 2px 0 #cccccc, 0 3px 0 #cccccc,
+            0 4px 0 #cccccc, 0 5px 0 #cccccc, 0 6px 0 #cccccc, 0 7px 0 #cccccc,
+            0 8px 0 #cccccc, 0 9px 0 #cccccc, 0 50px 30px rgba(0, 0, 0, 0.3);
+        }
+      }
+
+      @keyframes vibrate-1 {
+        0% {
+          transform: translate(0);
+        }
+        20% {
+          transform: translate(-2px, 2px);
+        }
+        40% {
+          transform: translate(-2px, -2px);
+        }
+        60% {
+          transform: translate(2px, 2px);
+        }
+        80% {
+          transform: translate(2px, -2px);
+        }
+        100% {
+          transform: translate(0);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="text text-pop-up-top vibrate-1">HITESH</div>
+  </body>
+</html>

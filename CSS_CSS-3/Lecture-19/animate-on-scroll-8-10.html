@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Document</title>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <style>
+      .spacer {
+        height: 1000px;
+        background-color: whitesmoke;
+      }
+      .card {
+        height: 300px;
+        width: 300px;
+        background-color: tomato;
+        border-radius: 12px;
+        margin: 50px auto;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="spacer"></div>
+    <div class="card" data-aos="fade-up"></div>
+    <div class="card" data-aos="fade-down"></div>
+    <div
+      class="card"
+      data-aos="fade-right"
+      data-aos-duration="2000"
+      data-aos-easing="linear"
+    ></div>
+    <div class="card" data-aos="fade-up-right"></div>
+    <div class="card" data-aos="flip-left"></div>
+    <div class="card" data-aos="flip-right"></div>
+    <div class="card" data-aos="zoom-in"></div>
+    <div class="card" data-aos="zoom-out"></div>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+  </body>
+</html>
