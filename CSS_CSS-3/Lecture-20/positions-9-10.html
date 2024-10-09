@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      .parent {
+        height: 600px;
+        border-radius: 12px;
+        margin: 30px;
+        border: 1px solid black;
+        display: flex;
+        position: relative;
+      }
+
+      .child {
+        height: 100px;
+        width: 100px;
+        /* border-radius: 12px; */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 32px;
+        font-weight: 600;
+        background-color: tomato;
+        border: 1px solid black;
+      }
+
+      .spacer {
+        height: 1000px;
+        background-color: wheat;
+      }
+
+      .child:nth-child(5) {
+        position: fixed;
+        /* top: 130px; */
+        /* left: 430px; */
+        right: 100px;
+        bottom: 100px;
+      }
+
+      .child:nth-child(4) {
+        position: sticky;
+        top: 50px;
+        left: 500px;
+      }
+      .child:nth-child(1) {
+        position: relative;
+        top: 100px;
+        left: 100px;
+        background-color: yellowgreen;
+        z-index: 3;
+      }
+
+      .child:nth-child(2) {
+        position: absolute;
+        top: 150px;
+        left: 130px;
+        background-color: teal;
+        z-index: 2;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="parent">
+      <div class="child">1</div>
+      <div class="child">2</div>
+      <div class="child">3</div>
+      <div class="child">4</div>
+      <div class="child">5</div>
+    </div>
+    <div class="spacer"></div>
+  </body>
+</html>
+
+<!-- Types of positions -->
+
+<!-- 1. Static, by default, it will not take any offset, it is also used tor remove position -->
+<!-- 2. Relative, it occupy space as normal, it will take offset from its original position -->
+<!-- 3. Absolute, it will take position according to its nearest positioned parent, it will take offset from its nearest positioned parent, it will not occupy space   -->
+<!-- 4. Fixed, it will be fixed on whatever position we fix it at, it will take offset from viewport, it will not occupy any space -->
+<!-- 5. Sticky, it will fixed at positioned we fix it but it will not go beyond its parent  -->
+
+<!-- Offset, it means we are shifting element from its position -->
+<!-- 1. top -->
+<!-- 2. left -->
+<!-- 4. bottom -->
+<!-- 3. right -->
