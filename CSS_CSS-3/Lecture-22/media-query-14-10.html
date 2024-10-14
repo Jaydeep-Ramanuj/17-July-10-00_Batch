@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* Types of media  */
+      /* 1. Screen
+      2. Print
+      3. all */
+
+      /* min-width, it accepts all width sizes above mentioned size */
+      /* max-width, it accepts all width sizes below mentioned size */
+
+      /* Mobile first approach, it is use to make website responsive as we first make mobile design and then make larger sizes. It has advantage of min-width, because if something is working fine in smaller device then we don't to change it on larger devices */
+
+      .box {
+        height: 300px;
+        width: 300px;
+        background-color: tomato;
+        border-radius: 12px;
+        margin: 50px auto;
+
+        transition: all 300ms;
+      }
+
+      .parent {
+        border: 2px solid black;
+        padding: 20px;
+        display: flex;
+        justify-content: space-between;
+      }
+
+      .child {
+        width: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 10px;
+        background-color: orangered;
+        color: white;
+        font-size: 24px;
+      }
+
+      @media print {
+        .child {
+          font-size: 5px;
+        }
+      }
+
+      @media (min-width: 200px) and (max-width: 350px) {
+        .box {
+          background-color: blue;
+        }
+        .parent {
+          flex-direction: column;
+        }
+      }
+
+      @media screen and (min-width: 400px) {
+        .box {
+          background-color: teal;
+          height: 500px;
+        }
+      }
+
+      @media screen and (min-width: 600px) {
+        .box {
+          border-radius: 48px;
+          height: 300px;
+          border: none;
+        }
+      }
+
+      @media all and (min-width: 800px) {
+        .box {
+          border: 10px solid black;
+        }
+      }
+      @media all and (min-width: 1200px) {
+        .parent {
+          justify-content: space-evenly;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box"></div>
+
+    <div class="parent">
+      <div class="child">child1</div>
+      <div class="child">child2</div>
+      <div class="child">child3</div>
+      <div class="child">child4</div>
+      <div class="child">child5</div>
+    </div>
+  </body>
+</html>
+
+<!-- standard CSS breakpoint, you can use any other breakpoints too.  -->
+
+<!-- /* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {...}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {...}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {...}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {...}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {...} -->
