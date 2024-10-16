@@ -17,7 +17,7 @@
   --theme-color: #d54745;
   --special-color: #00fe60;
 
-  --section-padding: 0px 100px;
+  --section-padding: 0px 20px;
   --section-gap: 50px;
 }
 
@@ -49,6 +49,10 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.section-heading h2 {
+  font-size: 16px;
 }
 
 .section-heading .arrows {
@@ -196,6 +200,7 @@ header .top-header {
   text-align: center;
   padding: 5px 0px;
   font-size: 14px;
+  display: none;
 }
 
 header .top-header span u {
@@ -222,19 +227,35 @@ header nav {
   justify-content: space-between;
   align-items: center;
   border-bottom: 1px solid rgba(98, 98, 98, 0.309);
+  position: relative;
 }
 
 header nav .nav-wrapper {
+  width: 100%;
+  padding: 30px;
   display: flex;
+  flex-direction: column;
+  background-color: black;
+
   flex-grow: 1;
   justify-content: space-between;
+  /* display: none; */
+  visibility: hidden;
+  opacity: 0;
+  transition: all 200ms 100ms;
+  position: absolute;
+  right: -50px;
+  top: 50px;
+  z-index: 10;
 }
 
 header nav .nav-wrapper ul {
   display: flex;
+  flex-direction: column;
   align-items: center;
   list-style-type: none;
-  gap: 30px;
+  /* gap: 30px; */
+  gap: 10px;
   margin-left: 200px;
 }
 
@@ -259,13 +280,15 @@ header nav .nav-wrapper ul li:hover::before {
 
 header nav .nav-wrapper ul a {
   text-decoration: none;
-  color: var(--text-primary-color);
+  /* color: var(--text-primary-color); */
+  color: white;
 }
 
 header nav .nav-wrapper .options {
   display: flex;
   align-items: center;
   gap: 10px;
+  margin-top: 20px;
 }
 
 header nav .nav-wrapper .options .search-bar {
@@ -274,6 +297,10 @@ header nav .nav-wrapper .options .search-bar {
   display: flex;
   align-items: center;
   padding: 5px;
+}
+
+header nav .nav-wrapper .options i {
+  color: white;
 }
 
 header nav .nav-wrapper .options .search-bar input {
@@ -290,25 +317,51 @@ header nav .nav-wrapper .options .search-bar i {
   font-size: 14px;
 }
 
+header #toggle {
+  display: none;
+}
+
+header .fa-solid.fa-bars {
+  font-size: 18px;
+}
+
+header #toggle:checked + .nav-wrapper {
+  display: flex;
+  opacity: 1;
+  visibility: visible;
+  right: 0px;
+}
+
 /* #hero-section */
 
 #hero-section {
   padding: var(--section-padding);
   display: flex;
   justify-content: space-around;
+  flex-wrap: wrap-reverse;
 }
 
 #hero-section .categories {
-  padding-top: 30px;
-  min-height: 100%;
-  padding-right: 70px;
+  /* padding-top: 30px; */
+  padding-top: 10px;
+  width: 100%;
+  /* min-height: 100%; */
+  /* padding-right: 70px; */
   border-right: 1px solid rgba(98, 98, 98, 0.309);
+}
+
+#hero-section .categories select {
+  width: 100%;
+  border-radius: 12px;
+  border-color: #7b7b7b;
+  padding: 3px;
 }
 #hero-section .categories ul {
   min-height: inherit;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: space-between;
+  display: none;
 }
 
 #hero-section .categories ul li {
@@ -319,6 +372,11 @@ header nav .nav-wrapper .options .search-bar i {
 #hero-section .categories ul a {
   text-decoration: none;
   color: var(--text-primary-color);
+}
+
+#hero-section .slider,
+#hero-section .slider img {
+  width: 100%;
 }
 
 #hero-section .slider {
@@ -361,11 +419,21 @@ header nav .nav-wrapper .options .search-bar i {
   margin-top: var(--section-gap);
 }
 
+#flash-sale-section .section-heading {
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
 #flash-sale-section .sale-numbers {
   display: flex;
   gap: 10px;
-  margin-right: auto;
-  margin-left: 100px;
+  /* margin-right: auto; */
+  /* margin-left: 100px; */
+}
+
+#flash-sale-section .section-heading .arrows {
+  width: 100%;
+  justify-content: space-between;
 }
 
 #flash-sale-section .number h3 {
@@ -407,6 +475,7 @@ header nav .nav-wrapper .options .search-bar i {
 #category-section .categories-list .category {
   height: 150px;
   width: 150px;
+  min-width: 150px;
   border-radius: 5px;
   border: 2px solid lightgray;
   display: flex;
@@ -419,8 +488,13 @@ header nav .nav-wrapper .options .search-bar i {
 
 #category-section .categories-list {
   margin-top: 20px;
+  padding-bottom: 15px;
+  width: 100%;
+  overflow: scroll;
+  scrollbar-width: thin;
   display: flex;
   justify-content: space-evenly;
+  gap: 10px;
 }
 
 #category-section .categories-list .category i {
@@ -445,10 +519,12 @@ header nav .nav-wrapper .options .search-bar i {
 }
 
 #explore-products-section .product-list {
+  width: 100%;
+  overflow: scroll;
   margin-top: 30px;
   display: flex;
   justify-content: space-evenly;
-  flex-wrap: wrap;
+  /* flex-wrap: wrap; */
   gap: 30px;
 }
 
@@ -457,7 +533,7 @@ header nav .nav-wrapper .options .search-bar i {
 }
 
 #explore-products-section .btn {
-  margin: 0 auto;
+  margin: 20px auto;
 }
 
 /* #new-arrivals-section */
@@ -468,9 +544,10 @@ header nav .nav-wrapper .options .search-bar i {
 
 #new-arrivals-section .image-gallary {
   margin-top: 30px;
-  height: 500px;
+  /* height: 500px; */
   display: flex;
   gap: 20px;
+  flex-wrap: wrap;
 }
 
 #new-arrivals-section .image-gallary .right {
@@ -511,7 +588,8 @@ header nav .nav-wrapper .options .search-bar i {
 #new-arrivals-section .image-gallary .left {
   background-color: #000000;
   background-image: url(../images/ps5-slim-goedkope-playstation_large\ 1.png);
-  height: 100%;
+  /* height: 100%; */
+  height: 300px;
   width: 600px;
   max-width: 550px;
   background-size: cover;
@@ -554,6 +632,8 @@ header nav .nav-wrapper .options .search-bar i {
 
   display: flex;
   justify-content: space-evenly;
+  gap: 20px;
+  flex-wrap: wrap;
 }
 
 #services-section .service {
@@ -599,9 +679,11 @@ footer hr {
   border-color: rgba(128, 128, 128, 0.284);
 }
 footer .top-footer {
-  padding: 30px 100px;
+  padding: 30px 20px;
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
 }
 footer .top-footer .company-info {
   display: flex;
