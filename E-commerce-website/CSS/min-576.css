@@ -1,0 +1,24 @@
+@media (min-width: 576px) {
+  :root {
+    --section-padding: 0px 40px;
+  }
+
+  header nav .nav-wrapper {
+    align-items: end;
+  }
+
+  header nav .nav-wrapper ul {
+    max-width: 200px;
+  }
+  header nav .nav-wrapper .options {
+    max-width: fit-content;
+  }
+
+  #new-arrivals-section .image-gallary .left {
+    height: 400px;
+    width: 100%;
+  }
+  footer .top-footer {
+    padding: 30px 40px;
+  }
+}

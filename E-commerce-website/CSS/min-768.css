@@ -1,0 +1,70 @@
+@media (min-width: 768px) {
+  :root {
+    --section-padding: 0px 70px;
+  }
+
+  header .top-header {
+    display: block;
+    text-align: center;
+  }
+  header .top-header select {
+    margin-left: 30px;
+  }
+
+  header .fa-solid.fa-bars {
+    display: none;
+  }
+  header nav {
+    padding: 0px 50px;
+  }
+
+  header nav .nav-wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: static;
+    opacity: 1;
+    background-color: transparent;
+    padding: 20px;
+  }
+  header nav .nav-wrapper ul {
+    width: fit-content;
+    flex-direction: row;
+    max-width: none;
+    margin-left: auto;
+  }
+  header nav .nav-wrapper .options {
+    margin-top: 0;
+    margin-left: auto;
+  }
+  header nav .nav-wrapper ul a,
+  header nav .nav-wrapper .options i {
+    color: black;
+  }
+
+  #hero-section .slider {
+    max-width: 70%;
+  }
+
+  #hero-section .categories {
+    width: fit-content;
+    padding-top: 30px;
+  }
+
+  #hero-section .categories ul {
+    display: flex;
+  }
+
+  #hero-section .categories select {
+    display: none;
+  }
+
+  #hero-section .slider img {
+    height: 80%;
+    /* object-fit: fill; */
+  }
+
+  footer .top-footer {
+    padding: 30px 70px;
+  }
+}
