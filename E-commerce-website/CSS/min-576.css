@@ -21,4 +21,16 @@
   footer .top-footer {
     padding: 30px 40px;
   }
+
+  #flash-sale-section .section-heading .arrows {
+    width: fit-content;
+  }
+
+  #flash-sale-section .sale-numbers {
+    margin-left: 50px;
+    margin-right: auto;
+  }
+  .section-heading h2 {
+    font-size: 24px;
+  }
 }

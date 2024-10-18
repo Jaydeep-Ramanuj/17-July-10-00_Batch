@@ -1,6 +1,21 @@
 @media (min-width: 992px) {
-  :root {
-    --section-padding: 0px 20px;
-    --section-gap: 50px;
+  #hero-section .slider img {
+    height: auto;
+  }
+
+  #explore-products-section .product-list {
+    overflow: hidden;
+    flex-wrap: wrap;
+  }
+
+  #new-arrivals-section .image-gallary .left {
+    width: fit-content;
+  }
+
+  #new-arrivals-section .image-gallary .left {
+    height: 520px;
+  }
+  #new-arrivals-section .image-gallary {
+    flex-wrap: nowrap;
   }
 }
