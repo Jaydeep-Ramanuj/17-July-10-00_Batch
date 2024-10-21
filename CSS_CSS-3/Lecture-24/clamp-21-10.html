@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      div {
+        font-size: 64px;
+        /* font-size: 7vw; */
+
+        /* font-size: clamp(min-value, preferable-value, max-value); */
+        font-size: clamp(24px, 10vw, 100px);
+      }
+
+      .box {
+        height: 100px;
+        /* width: 50%;
+        min-width: 300px;
+        max-width: 500px; */
+
+        width: clamp(300px, 50%, 500px);
+        background-color: tomato;
+        border-radius: 12px;
+        margin: 50px auto;
+      }
+
+      .box::before {
+        content: attr(data-name);
+      }
+    </style>
+  </head>
+  <body>
+    <div>Hello</div>
+
+    <p class="box" data-name="----">Something</p>
+  </body>
+</html>
