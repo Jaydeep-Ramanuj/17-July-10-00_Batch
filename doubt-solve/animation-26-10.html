@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .box {
+        height: 300px;
+        width: 300px;
+        background-color: tomato;
+        border-radius: 12px;
+        /* margin: 50px auto; */
+
+        animation-name: rotate, slide;
+        animation-duration: 2000ms, 1000ms;
+        animation-iteration-count: 5, 5;
+        animation-fill-mode: backwards;
+        animation-fill-mode: forwards;
+        animation-fill-mode: both, both;
+        animation-direction: alternate;
+        animation-direction: reverse;
+        animation-direction: alternate-reverse, alternate-reverse;
+        animation-timing-function: ease;
+        animation-timing-function: ease-in;
+        animation-timing-function: ease-in-out, linear;
+        animation-timing-function: cubic-bezier(0.19, 1, 0.22, 1), linear;
+        animation-delay: 300ms, 300ms;
+      }
+
+      .box:hover {
+        animation-play-state: paused;
+      }
+
+      @keyframes slide {
+        from {
+          /* transform: rotate(0deg); */
+          transform: translateX(0);
+        }
+        to {
+          transform: translateX(800px);
+          /* transform: rotate(360deg); */
+        }
+      }
+      @keyframes rotate {
+        from {
+          /* transform: rotate(0deg); */
+          rotate: 0deg;
+        }
+        to {
+          /* transform: rotate(360deg); */
+          rotate: 360deg;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box"></div>
+  </body>
+</html>
