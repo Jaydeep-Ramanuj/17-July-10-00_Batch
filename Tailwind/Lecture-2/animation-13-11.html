@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            animation: {
+              slide: 'slide 1s ease-in-out infinite',
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      @keyframes slide {
+        0% {
+          transform: translateX(0px);
+        }
+        100% {
+          transform: translateX(1000px);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div
+      class="h-10 w-10 rounded bg-red-300 m-10 animate-spin duration-75"
+    ></div>
+    <div class="h-10 w-10 rounded bg-red-300 m-10 animate-slide"></div>
+  </body>
+</html>
