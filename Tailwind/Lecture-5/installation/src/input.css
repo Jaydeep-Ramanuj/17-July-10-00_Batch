@@ -1,3 +1,18 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+  .btn {
+    @apply w-fit px-4 py-1 rounded-lg  text-white text-center shadow-lg transition-all duration-300  active:scale-95;
+  }
+  .btn-primary {
+    @apply bg-blue-500 active:bg-blue-600;
+  }
+  .btn-danger {
+    @apply bg-red-500 active:bg-red-600;
+  }
+  .btn-success {
+    @apply bg-green-500 active:bg-green-600;
+  }
+}

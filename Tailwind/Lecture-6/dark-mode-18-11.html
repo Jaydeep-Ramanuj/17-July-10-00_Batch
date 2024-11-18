@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: 'selector',
+      };
+    </script>
+  </head>
+  <body class="dark:bg-slate-800 transition-all duration-300">
+    <div
+      class="w-96 h-96 mx-auto mt-10 shadow-xl rounded-md flex justify-center items-center text-2xl font-bold dark:bg-slate-800 dark:text-white border border-white"
+    >
+      This is some text
+    </div>
+
+    <button
+      class="px-4 py-1 w-fit rounded-md bg-slate-800 text-white dark:bg-white dark:text-slate-800"
+    >
+      Dark mode
+    </button>
+    <script>
+      document
+        .getElementsByTagName('button')[0]
+        .addEventListener('click', () => {
+          document.getElementsByTagName('html')[0].classList.toggle('dark');
+        });
+    </script>
+  </body>
+</html>
