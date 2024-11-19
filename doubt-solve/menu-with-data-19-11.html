@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      nav {
+        position: relative;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      .content {
+        width: 100%;
+        padding: 20px;
+        background-color: lightgray;
+        position: absolute;
+        /* top: 100px; */
+        left: 0;
+        display: none;
+      }
+      label {
+        cursor: pointer;
+      }
+      #home:checked + .content {
+        display: block;
+      }
+      #contact:checked + .content {
+        display: block;
+      }
+      #about:checked + .content {
+        display: block;
+      }
+      input[type='checkbox'] {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <label for="home"> Home </label>
+      <input type="checkbox" name="" id="home" />
+      <div class="content home-content">
+        <h1>This is Home content</h1>
+      </div>
+      <label for="contact"> Contact us </label>
+      <input type="checkbox" name="" id="contact" />
+      <div class="content contact-us-content">
+        <h1>This is Contact us content</h1>
+      </div>
+      <label for="about"> About us </label>
+      <input type="checkbox" name="" id="about" />
+      <div class="content about-us-content">
+        <h1>This is About us content</h1>
+      </div>
+    </nav>
+  </body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <div
+      class="w-96 h-96 rounded-md mx-auto mt-10 bg-red-300 group/grand-parent hover:bg-red-500"
+    >
+      <div
+        class="h-[200px] w-[200px] bg-blue-300 rounded-md mx-auto group/parent group-hover/grand-parent:bg-blue-500"
+      >
+        <div
+          class="h-20 w-20 rounded-md mx-auto bg-black group-hover/grand-parent:bg-red-700 group-hover/parent:bg-orange-600"
+        ></div>
+      </div>
+    </div>
+  </body>
+</html>
