@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Document</title>
+
+    <!-- Internal Js -->
+
+    <script defer>
+      console.log('Running from Head tag ');
+    </script>
+
+    <script src="js-intro.js"></script>
+  </head>
+  <body>
+    <!-- Inline Js-->
+    <button onclick="console.log('Namaste Javascript')">Click here</button>;
+
+    <!-- Inline Js -->
+    <script>
+      console.log('Running from Body tag');
+      document.body.style.backgroundColor = '#24252e';
+      //   document.querySelector('button').style.backgroundColor = '#76e66f';
+    </script>
+  </body>
+</html>
