@@ -17,6 +17,16 @@
       // Assignment operator
       phone = 541224;
 
+      // shaorthand notation
+      let result = 100;
+
+      // result = result + 10;
+      result += 10; // result = result + 10
+      result -= 10; // result = result - 10
+      result *= 10; // result = result * 10
+      result /= 10; // result = result / 10
+      result %= 10; // result = result % 10
+
       //   Arithmetic operators
 
       console.log('10 + 20: ', 10 + 20); // Addition operator
@@ -34,7 +44,7 @@
       console.log('10 <= 20:', 10 <= 20);
       console.log('10 >= 20:', 10 >= 20);
 
-      //   Equality operators
+      //   Equality operators, it checks if both values are matching or not, if they are matching it will give true else false
       console.log('10 == 10:', 10 == 10);
 
       // Logical operators
@@ -61,6 +71,54 @@
 
       console.log('10 != 10:', 10 != 10);
       console.log('10 != 5:', 10 != 5);
+
+      // Ternary operator
+
+      // condition ? expression_1: expression_2
+
+      let a = 10;
+      let b = 5;
+
+      console.log(a >= b ? 'a is GT than b or equal to b' : 'b is GT a');
+
+      if (a >= b) {
+        console.log('a is GT than b');
+      } else {
+        console.log('b is GT a');
+      }
+
+      // increment  /  decrement operator
+
+      let num = 10;
+      num++; // increment
+      console.log('num++ :', num);
+      num--; // decrement
+      console.log('num-- :', num);
+
+      // num = num + 1;
+      // num += 1;
+      // num++;
+
+      // num=num+5;
+      // num+=5;
+
+      let num1 = 10;
+      let num2 = '10';
+
+      console.log('typeof num1:', typeof num1);
+      console.log('typeof num2:', typeof num2);
+
+      // strict equality operator
+
+      // ==, it checks for values only, if both values are matching then it will give true else false
+
+      // ===, it checks for values as well as types, if both values and types are same then and then it will give true else false
+
+      console.log('num1 == num2:', num1 == num2);
+      console.log('num1 === num2:', num1 === num2);
+
+      // strict equality operator
+      console.log('num1 !== num2:', num1 !== num2);
     </script>
   </body>
 </html>
