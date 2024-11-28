@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          screens: {
+            xs: '400px',
+            sm: '640px',
+            md: '768px',
+            lg: '1024px',
+            xl: '1280px',
+            '2xl': '1536px',
+          },
+        },
+      };
+    </script>
+  </head>
+  <body>
+    <div
+      class="box w-[300px] h-[300px] bg-red-300 rounded-md mx-auto mt-10 xs:bg-red-600 sm:bg-slate-600 lg:bg-pink-900"
+    ></div>
+  </body>
+</html>
