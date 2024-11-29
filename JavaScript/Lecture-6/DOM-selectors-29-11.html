@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      p.some {
+        color: red;
+      }
+
+      input[name='user'] {
+        border: 2px solid red;
+      }
+    </style>
+  </head>
+  <body>
+    <p>This is p tag</p>
+    <p class="some">This is p tag with some class</p>
+    <div class="some">This is div tag with some class</div>
+    <div id="special">This is div tag with special id</div>
+
+    <input type="text" name="user" id="" placeholder="Enter your name" />
+    <input type="text" name="surname" id="" placeholder="Enter your surname" />
+
+    <script>
+      let pTag = document.getElementsByTagName('p');
+      let divTags = document.getElementsByTagName('div');
+
+      console.log(pTag);
+      console.log(divTags);
+      console.log(divTags[1]);
+
+      let someClass = document.getElementsByClassName('some');
+
+      console.log(someClass);
+      console.log(someClass[0]);
+
+      let specialId = document.getElementById('special');
+
+      console.log(specialId);
+
+      let inputTagWithName = document.getElementsByName('user');
+
+      console.log(inputTagWithName);
+      console.log(inputTagWithName[1]);
+
+      let pTagWithSomeClass = document.querySelector('p.some');
+      let pEle = document.querySelector('p');
+      let divEle = document.querySelector('div');
+      let someClassEle = document.querySelector('.some');
+      let specialIdEle = document.querySelector('#special');
+      let userElement = document.querySelector('input[name="user"]');
+
+      console.log('pTagWithSomeClass :', pTagWithSomeClass);
+      console.log('pEle :', pEle);
+      console.log('divEle :', divEle);
+      console.log('someClassEle :', someClassEle);
+      console.log('specialIdEle :', specialIdEle);
+      console.log('userElement :', userElement);
+
+      let pElements = document.querySelectorAll('p');
+
+      console.log(pElements);
+    </script>
+  </body>
+</html>

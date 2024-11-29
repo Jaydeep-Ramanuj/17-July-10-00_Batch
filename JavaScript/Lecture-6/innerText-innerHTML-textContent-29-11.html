@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .parent {
+        height: 500px;
+        width: 500px;
+        background-color: tomato;
+        border-radius: 12px;
+        margin: 50px auto;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .child {
+        height: 300px;
+        width: 300px;
+        background-color: teal;
+        border-radius: 12px;
+        margin: 50px auto;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .sub-child {
+        height: 100px;
+        width: 100px;
+        background-color: violet;
+        border-radius: 12px;
+        margin: 50px auto;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="parent">
+      Parent
+      <div class="child">
+        Child
+        <div class="sub-child">Sub-child</div>
+      </div>
+    </div>
+
+    <script>
+      let parent = document.querySelector('.parent');
+      let child = document.querySelector('.child');
+      let subChild = document.querySelector('.sub-child');
+
+      console.log(parent);
+      console.log(child);
+
+      // ------------
+      //   innerText and textContent
+      // ------------
+
+      console.log(parent.innerText);
+      console.log(parent.textContent);
+
+      subChild.innerText = 'This is new text';
+
+      // child.textContent = 'This is new text';
+
+      // textContent gets the content of all elements, including <script> and <style> elements.
+      // textContent returns every element in the node.
+      // innerText only shows “human-readable” elements.
+      // innerText looks at styling and won't return the text of “hidden” elements.
+
+      // ------------
+      //   innerHTML
+      // ------------
+
+      console.log(parent.innerHTML);
+
+      parent.innerHTML = '<h1 style="color:pink"><b>This is something</b></h1>';
+    </script>
+  </body>
+</html>

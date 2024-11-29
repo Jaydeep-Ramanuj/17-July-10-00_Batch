@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="number" name="" id="first" />
+    <input type="number" name="" id="second" />
+
+    <button>Sum</button>
+    <p>Result: <span>n</span></p>
+
+    <script>
+      let first = document.querySelector('#first');
+      let second = document.querySelector('#second');
+      let btn = document.querySelector('button');
+      let result = document.querySelector('span');
+
+      console.log('Outside');
+
+      console.log(first.value);
+      console.log(second.value);
+      btn.addEventListener('click', () => {
+        console.log('when button clicked');
+        console.log(first.value);
+        console.log(second.value);
+
+        // string to int / float conversion
+
+        // let total = parseInt(first.value) + parseInt(second.value);
+        // let total = parseFloat(first.value) + parseFloat(second.value);
+        let total = Number(first.value) + Number(second.value);
+
+        console.log(total);
+
+        result.innerText = total;
+      });
+    </script>
+  </body>
+</html>
