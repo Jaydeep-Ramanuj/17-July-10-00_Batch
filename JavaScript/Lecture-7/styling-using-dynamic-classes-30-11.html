@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .box-style {
+        height: 300px;
+        width: 300px;
+        background-color: tomato;
+        border-radius: 12px;
+        margin: 50px auto;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        font-size: 48px;
+        color: white;
+
+        transition: all 300ms;
+      }
+
+      .bcg-teal {
+        background-color: teal;
+      }
+
+      .wide {
+        width: 500px;
+      }
+
+      .long {
+        height: 500px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">Something</div>
+
+    <button class="btn-box">Add Box style</button>
+    <button class="btn-teal">Teal</button>
+    <button class="btn-wide">wide</button>
+    <button class="btn-long">long</button>
+    <script>
+      const box = document.querySelector('.box');
+
+      const btnBox = document.querySelector('.btn-box');
+      const btnTeal = document.querySelector('.btn-teal');
+      const btnWide = document.querySelector('.btn-wide');
+      const btnLong = document.querySelector('.btn-long');
+
+      btnTeal.addEventListener('click', () => {
+        // box.classList.add('bcg-teal');
+        box.classList.toggle('bcg-teal');
+      });
+      btnWide.addEventListener('click', () => {
+        // box.classList.add('wide');
+        box.classList.toggle('wide');
+      });
+      btnLong.addEventListener('click', () => {
+        // box.classList.add('long');
+        box.classList.toggle('long');
+        // box.style.cssText = 'height: 500px;';
+      });
+      btnBox.addEventListener('click', () => {
+        // box.classList.add('box-style');
+        box.classList.toggle('box-style');
+      });
+    </script>
+  </body>
+</html>

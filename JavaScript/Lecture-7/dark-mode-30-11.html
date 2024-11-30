@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <style>
+      body {
+        transition: background-color 600ms;
+      }
+      .dark-mode {
+        background-color: #24252e;
+      }
+      .toggle-dark-btn {
+        font-size: 24px;
+        color: #24252e;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- <button class="dark-btn">Dark mode</button>
+    <button class="light-btn">Light mode</button> -->
+    <!-- <button class="toggle-dark-btn">toggle dark mode</button> -->
+    <i class="fa-solid fa-moon toggle-dark-btn"></i>
+
+    <script>
+      const darkBtn = document.querySelector('.dark-btn');
+      const lightBtn = document.querySelector('.light-btn');
+      const toggleDarkBtn = document.querySelector('.toggle-dark-btn');
+
+      //   darkBtn.addEventListener('click', () => {
+      //     // document.getElementsByName('body')[0]
+      //     // document.querySelector('body')
+
+      //     console.log('Button clicked');
+
+      //     document.body.style.backgroundColor = '#24252e';
+      //   });
+      //   lightBtn.addEventListener('click', () => {
+      //     document.body.style.backgroundColor = 'lightgray';
+      //   });
+
+      toggleDarkBtn.addEventListener('click', () => {
+        document.body.classList.toggle('dark-mode');
+
+        if (toggleDarkBtn.classList.contains('fa-moon')) {
+          toggleDarkBtn.classList.replace('fa-moon', 'fa-sun');
+          toggleDarkBtn.style.color = 'lightgray';
+        } else {
+          toggleDarkBtn.classList.replace('fa-sun', 'fa-moon');
+          toggleDarkBtn.style.color = '#24252e';
+        }
+      });
+    </script>
+  </body>
+</html>

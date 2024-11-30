@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      .box {
+        /* height: 300px;
+        width: 300px;
+        background-color: tomato;
+        border-radius: 12px;
+        margin: 50px auto;
+        font-size: 48px;
+        display: flex;
+        justify-content: center;
+        align-items: center; */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">Box</div>
+
+    <script>
+      const box = document.querySelector('.box');
+
+      //   box.style.color = 'white';
+      //   box.style.height = '300px';
+      //   box.style.width = '300px';
+      //   box.style.backgroundColor = 'tomato';
+      //   box.style.fontSize = '48px';
+      //   box.style.borderRadius = '12px';
+      //   box.style.margin = '50px auto';
+      //   box.style.display = 'flex';
+      //   box.style.justifyContent = 'center';
+      //   box.style.alignItems = 'center';
+
+      //   box.style.cssText = 'width:300px; height:300px; background-color:tomato';
+
+      let boxStyle = ` height: 300px;
+        width: 300px;
+        background-color: tomato;
+        border-radius: 12px;
+        margin: 50px auto;
+        font-size: 48px;
+        display: flex;
+        justify-content: center;
+        align-items: center;`;
+
+      box.style.cssText = boxStyle;
+    </script>
+  </body>
+</html>

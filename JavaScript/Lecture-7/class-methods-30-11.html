@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .red {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box thing else" id="special">Box</div>
+    <button>toggle</button>
+    <script>
+      const div = document.querySelector('div');
+      const btn = document.querySelector('button');
+
+      console.log(div.className);
+      console.log(div.id);
+
+      //   div.className += ' other';
+      //   div.id = 'something';
+
+      console.log(div.classList);
+      console.log(div.classList[2]);
+
+      console.log(div.classList.contains('else'));
+      console.log(div.classList.contains('ooo'));
+
+      div.classList.add('abc');
+
+      console.log(div.classList);
+
+      div.classList.add('xyz', 'pqr');
+
+      div.classList.remove('pqr');
+
+      btn.addEventListener('click', () => {
+        div.classList.toggle('red');
+      });
+    </script>
+  </body>
+</html>
