@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <img src="" alt="Image not loading" />
+
+    <button id="get-btn">Get image</button>
+    <button id="set-btn">Set image</button>
+    <button id="change-btn">Change image</button>
+    <button id="remove-btn">Remove image</button>
+
+    <script>
+      const img = document.querySelector('img');
+      const getBtn = document.querySelector('#get-btn');
+      const setBtn = document.querySelector('#set-btn');
+      const changeBtn = document.querySelector('#change-btn');
+      const removeBtn = document.querySelector('#remove-btn');
+
+      console.log(img);
+
+      //   img.setAttribute('src', '');
+
+      getBtn.addEventListener('click', () => {
+        console.log(img.getAttribute('src'));
+      });
+
+      setBtn.addEventListener('click', () => {
+        img.setAttribute(
+          'src',
+          'https://images.pexels.com/photos/618833/pexels-photo-618833.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
+        );
+      });
+      changeBtn.addEventListener('click', () => {
+        let imgURL = prompt('Enter image URL');
+        img.setAttribute('src', imgURL);
+      });
+      removeBtn.addEventListener('click', () => {
+        img.removeAttribute('src');
+      });
+    </script>
+  </body>
+</html>

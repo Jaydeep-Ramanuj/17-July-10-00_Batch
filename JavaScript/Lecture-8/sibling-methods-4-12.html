@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="parent">
+      <div class="child">child1</div>
+      <div class="child">child2</div>
+      <div class="child" id="special">child3</div>
+      <div class="child">child4</div>
+      <div class="child">child5</div>
+    </div>
+
+    <script>
+      let special = document.getElementById('special');
+
+      console.log(special); // child 3
+      console.log(special.nextElementSibling); // child 4
+      console.log(special.nextElementSibling.nextElementSibling); // child 5
+      console.log(special.previousElementSibling); // child 2
+      console.log(special.previousElementSibling.previousElementSibling); // child 1
+      console.log(
+        special.previousElementSibling.previousElementSibling
+          .previousElementSibling
+      ); // null
+    </script>
+  </body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="parent">
+      <div class="child">child1</div>
+      <div class="child">child2</div>
+      <div class="child">child3</div>
+      <div class="child">
+        child4
+        <div class="sub-chlid">Sub-child 1</div>
+        <div class="sub-chlid" id="special">Sub-child 2</div>
+      </div>
+      <div class="child">child5</div>
+    </div>
+
+    <script>
+      let parent = document.querySelector('.parent');
+
+      console.log(parent);
+      console.log(parent.children);
+      console.log(parent.children[3]);
+      console.log(parent.children[3].children);
+
+      console.log(parent.firstElementChild);
+      console.log(parent.lastElementChild);
+
+      let special = document.querySelector('#special');
+
+      console.log(special); // sub-child
+      console.log(special.parentElement); // child
+      console.log(special.parentElement.parentElement); // parent
+      console.log(special.parentElement.parentElement.parentElement); // body
+      console.log(
+        special.parentElement.parentElement.parentElement.parentElement
+      ); // html
+      console.log(
+        special.parentElement.parentElement.parentElement.parentElement
+          .parentElement
+      ); // null
+      console.log(
+        special.parentElement.parentElement.parentElement.parentElement
+          .parentNode
+      ); // Document Object
+      console.dir(
+        special.parentElement.parentElement.parentElement.parentElement
+          .parentNode
+      ); // Document Object
+
+      console.log(parent.children.length); // 5
+      console.log(parent.childElementCount); // 5
+
+      console.log(parent.children[3].children.length); // 2
+    </script>
+  </body>
+</html>

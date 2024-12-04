@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .red {
+        color: red;
+      }
+      .box {
+        padding: 20px;
+        border-radius: 24px;
+        border: 2px solid black;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      <p>This is already present in Box</p>
+    </div>
+
+    <button id="add">Add p tag</button>
+    <script>
+      let box = document.querySelector('.box');
+
+      document.querySelector('#add').addEventListener('click', () => {
+        let newPElement = document.createElement('p');
+        newPElement.innerText = 'This is p tag';
+        newPElement.classList.add('red');
+        newPElement.setAttribute('id', 'para');
+        console.log(newPElement);
+
+        // box.append(newPElement); // will add as last element inside parent element
+        // box.prepend(newPElement); // will add first element inside parent element
+        // box.before(newPElement); // will add before parent element but outside
+        // box.after(newPElement); // will add after parent element but outside
+
+        box.append(newPElement);
+      });
+    </script>
+  </body>
+</html>
