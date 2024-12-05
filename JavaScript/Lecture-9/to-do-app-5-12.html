@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-[#84dbd9]">
+    <div class="to-do-app w-fit p-2 mx-auto mt-10">
+      <div class="task-input bg-white/55 rounded-md p-2">
+        <input
+          type="text"
+          name=""
+          id="task-input"
+          class="outline-none border-none bg-transparent p-2"
+          placeholder="Enter your task"
+        />
+        <button
+          class="add-task-btn py-2 px-4 w-fit mx-auto bg-blue-400 text-white rounded-md active:scale-95 transition-all duration-300"
+        >
+          Add
+        </button>
+      </div>
+      <ul class="task-list mt-4 min-h-[200px] bg-gray-200/25 rounded p-2">
+        <span class="no-task text-center block w-full text-gray-500"
+          >No Task ...</span
+        >
+        <!-- <li
+          class="task p-1 rounded bg-zinc-400/35 flex justify-between items-center"
+        >
+          <input type="checkbox" name="" class="h-4 w-4 peer" />
+          <span
+            class="mr-auto ml-2 text-slate-500 peer-checked:line-through decoration-red-600"
+            >Do something</span
+          >
+          <i class="delete-icon bi bi-archive-fill text-red-400"></i>
+        </li> -->
+      </ul>
+    </div>
+
+    <script>
+      const taskInput = document.querySelector('#task-input');
+      const addTaskBtn = document.querySelector('.add-task-btn');
+      const taskList = document.querySelector('.task-list');
+      const noTaskEle = document.querySelector('.no-task');
+
+      addTaskBtn.addEventListener('click', () => {
+        if (
+          taskList.children.length == 1 &&
+          taskList.firstElementChild.tagName == 'SPAN'
+        ) {
+          noTaskEle.style.display = 'none';
+        }
+
+        const newTaskEle = document.createElement('li');
+        newTaskEle.className =
+          'task p-1 rounded bg-zinc-400/35 flex justify-between items-center mt-1';
+
+        // const newTaskCheckBox = document.createElement('input');
+        // newTaskCheckBox.setAttribute('type', 'checkbox');
+
+        // newTaskCheckBox.className = 'h-4 w-4 peer';
+
+        // const newTaskText = document.createElement('span');
+        // newTaskText.className =
+        //   'mr-auto ml-2 text-slate-500 peer-checked:line-through decoration-red-600';
+        // newTaskText.innerText = taskInput.value;
+
+        // taskInput.value = '';
+
+        // const newTaskDeleteIcon = document.createElement('i');
+        // newTaskDeleteIcon.className =
+        //   'delete-icon bi bi-archive-fill text-red-400';
+        // newTaskDeleteIcon.setAttribute('onClick', 'deleteTask(this)');
+
+        // newTaskEle.append(newTaskCheckBox);
+        // newTaskEle.append(newTaskText);
+        // newTaskEle.append(newTaskDeleteIcon);
+
+        newTaskEle.innerHTML = `
+          <input type="checkbox" name="" class="h-4 w-4 peer" />
+          <span
+            class="mr-auto ml-2 text-slate-500 peer-checked:line-through decoration-red-600"
+            >${taskInput.value}</span
+          >
+          <i class="delete-icon bi bi-archive-fill text-red-400" onClick="deleteTask(this)"></i>
+          `;
+
+        console.log(newTaskEle);
+        taskList.prepend(newTaskEle);
+      });
+
+      function deleteTask(ele) {
+        taskList.removeChild(ele.parentElement);
+
+        if (taskList.children.length == 1) {
+          noTaskEle.style.display = 'block';
+        }
+      }
+    </script>
+  </body>
+</html>
