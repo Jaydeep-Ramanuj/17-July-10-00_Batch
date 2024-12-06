@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #output {
+        margin: 10px;
+        border-radius: 12px;
+        padding: 10px;
+        border: 1px solid grey;
+      }
+    </style>
+  </head>
+  <body>
+    <button>Click me</button>
+    <input type="text" name="" id="inp" />
+
+    <button onclick="document.body.style.backgroundColor='#321c20'">
+      Button 2
+    </button>
+
+    <div id="output"></div>
+
+    <hr />
+    <form>
+      <input type="text" name="" id="" placeholder="Enter your name" />
+      <button>Submit</button>
+    </form>
+    <script>
+      const btn = document.querySelector('button');
+
+      //   btn.addEventListener('click', () => {
+      //     document.body.style.backgroundColor = '#24252e';
+      //   });
+
+      //   btn.addEventListener('mouseover', () => {
+      //     btn.style.color = 'red';
+      //   });
+
+      //   btn.addEventListener('dblclick', () => {
+      //     btn.style.backgroundColor = 'tomato';
+      //   });
+
+      //   btn.addEventListener('focus', () => {
+      //     btn.style.outlineColor = 'blue';
+      //   });
+
+      //   btn.addEventListener('mousedown', () => {
+      //     btn.innerText = 'Active';
+      //   });
+
+      //   btn.addEventListener('mouseup', () => {
+      //     btn.innerText = 'Click me';
+      //   });
+
+      const inp = document.querySelector('#inp');
+      const output = document.querySelector('#output');
+
+      //   inp.addEventListener('change', () => {
+      //     output.innerText = inp.value;
+      //   });
+
+      inp.addEventListener('input', () => {
+        output.innerText = inp.value;
+      });
+
+      //   btn.onclick = (e) => {
+      //     console.log(e);
+      //     console.log('clicked');
+      //   };
+
+      btn.ondblclick = (e) => {
+        console.log(e);
+        console.log('dbl clicked');
+      };
+
+      //   document.body.onkeydown = (e) => {
+      //     console.log(e);
+      //     console.log('code: ', e.code);
+      //     console.log('keyCode: ', e.keyCode);
+      //     console.log('key: ', e.key);
+      //   };
+
+      document.body.onkeydown = (e) => {
+        if (e.ctrlKey && e.shiftKey && e.key == 'Z') {
+          document.body.style.backgroundColor = '#24252e';
+        }
+      };
+
+      document.querySelector('form button').addEventListener('click', (e) => {
+        e.preventDefault();
+        console.log(document.querySelector('form input').value);
+      });
+    </script>
+  </body>
+</html>
