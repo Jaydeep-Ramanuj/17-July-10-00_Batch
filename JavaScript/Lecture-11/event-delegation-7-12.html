@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .parent {
+        border: 2px solid black;
+        border-radius: 12px;
+        width: 90%;
+        margin: 50px auto;
+        padding: 10px;
+
+        display: flex;
+        justify-content: space-evenly;
+      }
+
+      .child {
+        height: 80px;
+        width: 80px;
+        background-color: tomato;
+        border-radius: 12px;
+
+        border: 1px solid black;
+        font-size: 24px;
+        font-weight: 600;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="parent">
+      <div class="child">1</div>
+      <div class="child">2</div>
+      <div class="child">3</div>
+      <div class="child">4</div>
+      <div class="child">5</div>
+      <div class="child">6</div>
+      <div class="child">7</div>
+      <div class="child">8</div>
+      <div class="child">9</div>
+      <div class="child">10</div>
+      <div class="child">11</div>
+    </div>
+
+    <script>
+      const parent = document.querySelector('.parent');
+      const children = document.querySelectorAll('.child');
+
+      //   Array.from(children).map((child) =>
+      //     child.addEventListener('click', () => {
+      //       console.log(`${child.innerText} clicked`);
+      //     })
+      //   );
+
+      parent.addEventListener('click', (e) => {
+        // console.log('child clicked');
+        // console.log(e.target);
+
+        if (e.target.classList.contains('child')) {
+          console.log(`${e.target.innerText} clicked`);
+
+          e.target.style.backgroundColor = 'teal';
+        }
+      });
+    </script>
+  </body>
+</html>

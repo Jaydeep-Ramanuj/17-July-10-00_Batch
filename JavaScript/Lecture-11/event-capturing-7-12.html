@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .parent {
+        height: 500px;
+        width: 500px;
+        background-color: tomato;
+        border-radius: 12px;
+        margin: 50px auto;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .child {
+        height: 300px;
+        width: 300px;
+        background-color: teal;
+        border-radius: 12px;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .sub-child {
+        height: 100px;
+        width: 100px;
+        background-color: yellowgreen;
+        border-radius: 12px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="parent">
+      <div class="child">
+        <div class="sub-child"></div>
+      </div>
+    </div>
+
+    <script>
+      // event capturing, it is used when we want to trigger event in top to bottom approach, html to specific child
+
+      //    html => body => parent => child => sub-child
+
+      //   it is also called event trickling
+
+      const parent = document.querySelector('.parent');
+      const child = document.querySelector('.child');
+      const subChild = document.querySelector('.sub-child');
+
+      subChild.addEventListener(
+        'click',
+        () => {
+          console.log('Sub child clicked');
+        },
+        true
+      );
+
+      child.addEventListener(
+        'click',
+        () => {
+          console.log('Child clicked');
+        },
+        true
+      );
+
+      parent.addEventListener(
+        'click',
+        () => {
+          console.log('Parent clicked');
+        },
+        true
+      );
+
+      document.body.addEventListener(
+        'click',
+        () => {
+          console.log('Body clicked');
+        },
+        true
+      );
+
+      document.addEventListener(
+        'click',
+        () => {
+          console.log('HTML clicked');
+        },
+        true
+      );
+    </script>
+  </body>
+</html>
