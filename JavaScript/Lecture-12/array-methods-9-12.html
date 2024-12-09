@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let foods = [
+        'Panipuri',
+        'Dhokla',
+        'Khaman',
+        'Idli',
+        'Uttapam',
+        'Pav bhaji',
+        'Nan',
+        'Pizza',
+        'Burger',
+        'Sandwich',
+        'Dhosa',
+        'Nan',
+        'Dabeli',
+      ];
+
+      console.log(foods);
+      console.log(foods[3]);
+
+      console.log(foods.length); // gives length of an array
+      console.log(foods.indexOf('Nan')); // gives first index of specified items
+      console.log(foods.lastIndexOf('Nan')); // gives last index of specified items
+      console.log(foods.at(8)); // gives item stored at specified index
+
+      //   console.log(foods);
+      //   foods.push('Kachori'); // it adds (appends) an items at the end of the array
+      //   console.log(foods);
+
+      //   console.log(foods);
+      //   console.log(foods.pop()); // it removes an items from the end of the array and returns it
+      //   console.log(foods);
+
+      //   console.log(foods);
+      //   console.log(foods.shift()); // it removes an items from the start of the array and returns it
+      //   console.log(foods);
+
+      //   console.log(foods);
+      //   foods.unshift('Kachori'); // it adds (prepends) an items at the start of the array
+      //   console.log(foods);
+
+      //   slice (starting_index, ending_index)
+      console.log(foods.slice(2, 9));
+      console.log(foods.slice(0, 3)); // first 3 items
+      console.log(foods.slice(foods.length - 4, foods.length - 1)); // last 3 items
+      console.log(foods.slice(-4, -1)); // last 3 items
+
+      console.log(foods.join()); // it returns an string with joined array items using specified separator
+      console.log(foods.join(', '));
+      console.log(foods.join('* '));
+      console.log(foods.join(' -> '));
+
+      //   console.log(foods);
+      //   //   splice('start_index', 'number_of_elements_to_delete', 'items_to_add');
+      //   foods.splice(1, 1);
+      //   console.log(foods);
+
+      //   console.log(foods);
+      //   foods.splice(2, 3);
+      //   console.log(foods);
+
+      //   console.log(foods);
+      //   foods.splice(3, 1, 'Masala Dhosa');
+      //   console.log(foods);
+
+      //   console.log(foods);
+      //   foods.splice(
+      //     3,
+      //     1,
+      //     'Masala Dhosa',
+      //     'Maisuri dhosa',
+      //     'Paneer Dhosa',
+      //     'Cheese Dhosa'
+      //   );
+      //   console.log(foods);
+
+      console.log(foods);
+      foods.splice(
+        foods.indexOf('Dhosa'),
+        1,
+        'Masala Dhosa',
+        'Maisuri dhosa',
+        'Paneer Dhosa',
+        'Cheese Dhosa'
+      );
+      console.log(foods);
+    </script>
+  </body>
+</html>

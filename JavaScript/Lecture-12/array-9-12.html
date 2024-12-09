@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let name = 'Akshara';
+
+      name = 'Stuti';
+
+      console.log(name);
+
+      // array, it is used to store multiple values, to access an element from array we use index, which starts from 0.
+      // Index =>      0          1        2       3       4           5
+      let names = ['Akashara', 'Jianl', 'Stuti', 'Dhara', 'Princi', 'Prachi'];
+
+      console.log(names);
+      console.log(names[0]);
+      console.log(names[3]);
+
+      names[4] = 'Payal';
+
+      console.log(names);
+
+      // An array can have multiple types of data at the same time
+
+      items = [
+        10,
+        20.3,
+        'A',
+        'Akshara',
+        true,
+        false,
+        name,
+        names,
+        [10, 20, 30],
+        { name: 'Raj', city: 'Rajkot' },
+        function greet() {
+          console.log('This is some function');
+        },
+      ];
+
+      console.log(items);
+      console.log(items[2]);
+      console.log(items[3]);
+      console.log(items[7]);
+      console.log(items[7][2]);
+      console.log(items[8]);
+      console.log(items[8][2]);
+      console.log(items[10]);
+    </script>
+  </body>
+</html>

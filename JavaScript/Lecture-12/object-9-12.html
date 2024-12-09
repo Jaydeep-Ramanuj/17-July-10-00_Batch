@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // syntax
+      // let obj_name={
+      //     key_1:value_1,
+      //     key_2:value_2,
+      //     key_3:value_3,
+      //     .
+      //     .
+      //     .
+      // }
+
+      // object, collection of key-value pairs
+
+      let student = {
+        rollNumber: 1,
+        name: 'Raj',
+        city: 'Rajkot',
+        course: 'WD',
+        education: 'btech',
+
+        collage: {
+          name: 'Marwadi',
+          city: 'Rajkot',
+          semester: 3,
+        },
+      };
+
+      console.log(student);
+      console.log(student.name); // using dot(.) notation
+      console.log(student.city);
+
+      student.city = 'Surat';
+
+      console.log(student);
+
+      console.log(student['education']); // using bracket obj_name["key_name"] notation
+
+      console.log(student.collage);
+      console.log(student.collage.name);
+      console.log(student.collage.semester);
+    </script>
+  </body>
+</html>

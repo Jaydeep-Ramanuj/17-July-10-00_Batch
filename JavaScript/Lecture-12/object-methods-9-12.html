@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let student = {
+        rollNumber: 1,
+        name: 'Raj',
+        city: 'Rajkot',
+        course: 'WD',
+        education: 'btech',
+
+        collage: {
+          name: 'Marwadi',
+          city: 'Rajkot',
+          semester: 3,
+        },
+      };
+
+      console.log(Object.keys(student)); // to get array of all keys from the provided object
+
+      console.log(Object.values(student)); // to get array of all values from the provided object
+
+      console.log(Object.entries(student)); // to get array of all key-values pair as an array from the provided object
+    </script>
+  </body>
+</html>
