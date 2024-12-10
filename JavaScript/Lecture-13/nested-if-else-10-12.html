@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //   -----
+      //   nested if - else,  this is used divide larger conditional logic in small parts and then check it further
+      //   -----
+
+      // syntax
+
+      // if(){
+      //     if(){
+
+      //     }else{
+
+      //     }
+      // }else{
+      //     if(){
+
+      //     }else{
+
+      //     }
+      // }
+
+      //   if (condition_1) {
+      //     if (condition_2) {
+      //       // code, this will run only if both condition_1 and condition_2 are true
+      //     } else {
+      //       // code, this will run only if both condition_1 is true but condition_2 is false
+      //     }
+      //   } else {
+      //     // code, this will run only if condition_1 is false
+      //   }
+
+      let age = 50;
+      let nationality = 'Indian';
+
+      if (nationality == 'Indian') {
+        if (age >= 18) {
+          console.log('You are eligible to vote in india');
+        } else {
+          console.log('You are Indian but you can not vote due to age < 18');
+        }
+      } else {
+        console.log('You are NOT eligible to vote in india');
+      }
+    </script>
+  </body>
+</html>
