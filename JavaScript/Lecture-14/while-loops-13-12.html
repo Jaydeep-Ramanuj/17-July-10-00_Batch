@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // while, it is like for loop but it is specially useful in scenario where we don't know how much time the loop will execute in advance
+
+      // syntax
+
+      //     initialization
+      //   while (condition) {
+      //     code;
+      //     increment / decrement;
+      //   }
+
+      //   let i = 0;
+      //   let total = 0;
+      //   while (i <= 10) {
+      //     console.log(i);
+      //     total += i;
+      //     i++;
+      //   }
+
+      //   console.log(total);
+
+      //   sum of all odd and even numbers
+      let i = 0;
+      let totalOfAllOddNumbers = 0;
+      let totalOfAllEvenNumbers = 0;
+      while (i < 10) {
+        if (i % 2 == 0) {
+          totalOfAllEvenNumbers += i;
+        } else {
+          totalOfAllOddNumbers += i;
+        }
+        i++;
+      }
+
+      console.log('totalOfAllEvenNumbers: ', totalOfAllEvenNumbers);
+      console.log('totalOfAllOddNumbers: ', totalOfAllOddNumbers);
+    </script>
+  </body>
+</html>
