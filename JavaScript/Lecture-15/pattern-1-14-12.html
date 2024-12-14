@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // *****
+
+      //   console.log('*****');
+      //   let str = '';
+      //   for (let i = 0; i < 5; i++) {
+      //     // console.log('*');
+      //     str = str + '*';
+      //   }
+
+      //   console.log(str);
+
+      // *****
+      // *****
+      // *****
+      // *****
+      // *****
+      let str = '';
+
+      // outer loop, which is responsible to run inner loop (making row of stars)
+      for (let i = 0; i < 5; i++) {
+        // inner loop, which is responsible to print stars (making column of stars)
+        for (let j = 0; j < 5; j++) {
+          str = str + '*';
+        }
+        str = str + '\n';
+      }
+
+      console.log(str);
+    </script>
+  </body>
+</html>

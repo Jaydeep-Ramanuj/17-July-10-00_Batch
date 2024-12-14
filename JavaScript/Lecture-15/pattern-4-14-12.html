@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // ========== Modifying inner loop =================
+
+      // * => i=1, * 1 times
+      // ** => i=2, * 2 times
+      // *** => i=3, * 3 times
+      // **** => i=4, * 4 times
+      // ***** => i=5, * 5 times
+      // **** => i=6, * 4 times => for i=1
+      // *** => i=7, * 3 times => for i=2
+      // ** => i=8, * 2 times => for i=3
+      // * => i=9, * 1 times => for i=4
+
+      let str = '';
+
+      for (let i = 1; i <= 9; i++) {
+        if (i <= 5) {
+          for (let j = 1; j <= i; j++) {
+            str = str + '*';
+          }
+        } else {
+          //   for (let k = 9; k >= i; k--) {
+          for (let k = 4; k >= i - 5; k--) {
+            str = str + '*';
+          }
+        }
+        str = str + '\n';
+      }
+
+      console.log(str);
+    </script>
+  </body>
+</html>

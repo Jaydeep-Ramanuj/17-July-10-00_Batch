@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // * => i=1, * 1 times
+      // ** => i=2, * 2 times
+      // *** => i=3, * 3 times
+      // **** => i=4, * 4 times
+      // ***** => i=5, * 5 times
+
+      let str = '';
+
+      for (let i = 1; i <= 10; i++) {
+        for (let j = 1; j <= i; j++) {
+          str = str + '*';
+        }
+        str = str + '\n';
+      }
+
+      console.log(str);
+    </script>
+  </body>
+</html>
