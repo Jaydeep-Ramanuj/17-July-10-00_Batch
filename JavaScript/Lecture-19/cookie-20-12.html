@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //   document.cookie = 'Marks2=95';
+
+      let person1 = {
+        id: 1,
+        name: 'Hitesh',
+        city: 'Rajkot',
+        course: 'WD',
+        Marks: 85,
+      };
+      let person2 = {
+        id: 2,
+        name: 'Akshara',
+        city: 'Surat',
+        course: 'Front end',
+        Marks: 90,
+      };
+      let person3 = {
+        id: 3,
+        name: 'Jay',
+        city: 'Ahmedabad',
+        course: 'Front end',
+        Marks: 75,
+      };
+
+      function setCookie(obj) {
+        let objString = JSON.stringify(obj);
+
+        document.cookie = `${obj.id}=${objString}`;
+      }
+
+      //   setCookie(person3);
+
+      function getCookie(id) {
+        let cookieString = document.cookie;
+        let individualCookies = cookieString.split('; ');
+
+        for (let i = 0; i < individualCookies.length; i++) {
+          if (individualCookies[i][0] == id) {
+            let objString = individualCookies[i].split('=')[1];
+
+            let obj = JSON.parse(objString);
+            return obj;
+          }
+        }
+
+        // return JSON.parse(document.cookie.split('=')[1]);
+      }
+
+      console.log(getCookie(3));
+    </script>
+  </body>
+</html>

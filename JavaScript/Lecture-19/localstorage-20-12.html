@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //   console.log(window.localStorage);
+
+      let person1 = {
+        id: 1,
+        name: 'Hitesh',
+        city: 'Rajkot',
+        course: 'WD',
+        Marks: 85,
+      };
+      let person2 = {
+        id: 2,
+        name: 'Akshara',
+        city: 'Surat',
+        course: 'Front end',
+        Marks: 90,
+      };
+      let person3 = {
+        id: 3,
+        name: 'Jay',
+        city: 'Ahmedabad',
+        course: 'Front end',
+        Marks: 75,
+      };
+
+      window.localStorage.setItem('1', JSON.stringify(person1));
+      console.log(window.localStorage);
+
+      console.log(JSON.parse(window.localStorage.getItem('1')));
+    </script>
+  </body>
+</html>
