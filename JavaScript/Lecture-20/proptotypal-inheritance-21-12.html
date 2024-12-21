@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      person = {
+        eat: (name) => {
+          console.log(name + ' is eating');
+        },
+        sleep: (name) => {
+          console.log(name + ' is sleeping');
+        },
+      };
+
+      obj1 = {
+        name: 'hitesh',
+        age: 22,
+        play: (name) => {
+          console.log(name + ' is playing');
+        },
+      };
+
+      obj1.__proto__ = person;
+      //   console.log(obj1);
+
+      console.log(obj1.name);
+      obj1.play('Suresh');
+      obj1.sleep('Jay');
+    </script>
+  </body>
+</html>

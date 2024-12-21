@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button class="geo-location">Get Geo Location</button>
+    <button class="clipboard">Get clipboard text</button>
+    <button class="setTextToClipboard">set clipboard text</button>
+    <script>
+      console.log(window);
+
+      document.querySelector('.geo-location').addEventListener('click', () => {
+        window.navigator.geolocation.getCurrentPosition((response) => {
+          console.log(response.coords);
+        });
+      });
+
+      document.querySelector('.clipboard').addEventListener('click', () => {
+        window.navigator.clipboard.readText().then((response) => {
+          console.log(response);
+        });
+      });
+      document
+        .querySelector('.setTextToClipboard')
+        .addEventListener('click', () => {
+          console.log(window.navigator.clipboard);
+
+          window.navigator.clipboard
+            .writeText('This custom text will be written in your clipboard')
+            // .writeText("Hi, My name is hitesh and I'm learning JavaScript")
+            .then((response) => {
+              console.log('text added to your clipboard');
+            });
+        });
+    </script>
+  </body>
+</html>
