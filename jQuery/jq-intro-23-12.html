@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="some">This id div tag with some id</div>
+    <div class="thing">
+      This is div tag with thing class
+      <p>This p tag is inside thing class element</p>
+    </div>
+    <p>This is p tag</p>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+      integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <script>
+      console.log('Hello jQuery');
+
+      //   const someEle = document.getElementById('some');
+      //   const someEle = document.querySelector('#some');
+
+      const someIdEle = $('#some');
+      console.log(someIdEle);
+
+      const thingClassEle = $('.thing');
+      console.log(thingClassEle);
+
+      const pTagEle = $('p');
+      console.log(pTagEle);
+
+      const pTagInsideThingClassEle = $('.thing p');
+      console.log(pTagInsideThingClassEle);
+    </script>
+  </body>
+</html>
