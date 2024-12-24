@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .box {
+        height: 100px;
+        width: 100px;
+        background-color: tomato;
+        border-radius: 12px;
+        margin: 50px auto;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="parent">
+      Parent
+      <div class="child">Child</div>
+    </div>
+
+    <input type="text" name="" id="" placeholder="Enter your name" />
+    <button id="getVal">Get Value</button>
+    <button id="setVal">Set Value</button>
+
+    <hr />
+
+    <div class="box"></div>
+
+    <button id="getCSS">Get CSS</button>
+    <button id="setCSS">Set CSS</button>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+      integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script>
+      // Accessing and changing of innerText
+
+      //   console.log(document.querySelector('.parent').innerText);
+      //   document.querySelector('.parent').innerText = 'This is new text';
+
+      //   console.log($('.parent').text());
+      //   $('.parent').text('This is new text');
+
+      // Accessing and changing of innerHTML
+
+      console.log($('.parent').html());
+      $('.parent').html('<b>This is bold tag</b>');
+
+      // Accessing and changing of input value
+
+      $('#getVal').click(() => {
+        console.log($('input').val());
+      });
+
+      $('#setVal').click(() => {
+        $('input').val('This is new value');
+      });
+
+      // Accessing and changing of input value
+
+      $('#getCSS').click(() => {
+        console.log($('.box').css('background-color'));
+        console.log($('.box').css('border-radius'));
+        console.log($('.box').css('height'));
+        console.log($('.box').css('width'));
+      });
+      $('#setCSS').click(() => {
+        // $('.box').css('background-color', 'teal');
+        // $('.box').css('border-radius', '24px');
+        // $('.box').css('height', '200px');
+        // $('.box').css('width', '200px');
+
+        $('.box').css({
+          width: '150px',
+          height: '150px',
+          'background-color': 'orange',
+        });
+      });
+    </script>
+  </body>
+</html>
