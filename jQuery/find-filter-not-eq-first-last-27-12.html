@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      .parent {
+        width: fit-content;
+        margin: 50px auto;
+      }
+
+      .child {
+        width: fit-content;
+        min-width: 50px;
+        height: 50px;
+        border-radius: 8px;
+        margin-top: 10px;
+        background-color: teal;
+        font-size: 32px;
+        color: white;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="parent">
+      <div class="child child1">1</div>
+      <div class="child child2" id="start">2 => start</div>
+      <div class="child child3 some">3</div>
+      <div class="child child4">4</div>
+      <div class="child child5 some">5</div>
+      <div class="child child6 some" id="middle">6 => middle</div>
+      <div class="child child7">7</div>
+      <div class="child child8">8</div>
+      <div class="child child9 some" id="end">9 => end</div>
+      <div class="child child10">10</div>
+    </div>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+      integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <script>
+      console.log($('#start').parent().find('#end')); // finds an elements are returns it
+      console.log($('#start').siblings().filter('#end')); // filter elements based on selector you specified and returns list of those elements
+      console.log($('#start').siblings().filter('.some'));
+
+      console.log($('.parent').children().eq(2)); // return an element from list which is equal to number you specified
+      console.log($('.parent').children().eq(1));
+      console.log($('.parent').children().first());
+      console.log($('.parent').children().last());
+
+      console.log($('.parent').children().not('.some')); // returns all elements that don't satisfy selector you specified
+    </script>
+  </body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .parent {
+        height: 700px;
+        width: 700px;
+        background-color: tomato;
+        border-radius: 12px;
+        margin: 50px auto;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .child {
+        height: 500px;
+        width: 500px;
+        background-color: teal;
+        border-radius: 12px;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .sub-child {
+        height: 300px;
+        width: 300px;
+        background-color: yellowgreen;
+        border-radius: 12px;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .sub-sub-child {
+        height: 100px;
+        width: 100px;
+        background-color: violet;
+        border-radius: 12px;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="parent">
+      <div class="child">
+        <div class="sub-child">
+          <div class="sub-sub-child"></div>
+        </div>
+      </div>
+      <!-- <div class="child"></div>
+      <div class="child"></div> -->
+    </div>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+      integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script>
+      console.log($('.parent').children()); // returns all children (descendent not included)
+      console.log($('.parent *')); // returns all descendent
+      console.log($('.parent').find('.sub-sub-child')); // finds perticular element in provided element
+
+      console.log($('.sub-sub-child').parent()); // return immediate parent
+      console.log($('.sub-sub-child').parents()); // returns all parents till html
+      console.log($('.sub-sub-child').parentsUntil('body')); // returns all parents till you specify
+    </script>
+  </body>
+</html>

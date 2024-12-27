@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .box {
+        border: 2px solid black;
+        padding: 20px;
+        border-radius: 12px;
+        margin: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <button id="before">before</button>
+    <button id="after">after</button>
+    <button id="prepend">prepend</button>
+    <button id="append">append</button>
+    <hr />
+    <div class="box">
+      <p>This line is already present</p>
+    </div>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+      integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script>
+      const box = $('.box');
+
+      $('#before').click(() => {
+        let newEle = $(
+          '<b>This line will be added before box, outside box element</b>'
+        );
+
+        box.before(newEle);
+      });
+      $('#after').click(() => {
+        let newEle = $(
+          '<i>This line will be added after box, outside box element</i>'
+        );
+
+        box.after(newEle);
+      });
+      $('#prepend').click(() => {
+        let newEle = $(
+          '<u>This line will be added before existing content, inside box element</u>'
+        );
+
+        box.prepend(newEle);
+      });
+      $('#append').click(() => {
+        let newEle = $(
+          '<mark>This line will be added after existing content, inside box element</mark>'
+        );
+
+        box.append(newEle);
+      });
+    </script>
+  </body>
+</html>
