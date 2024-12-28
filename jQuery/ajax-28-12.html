@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+      integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script>
+      // read local file
+      $.get('data.txt', (response) => {
+        console.log(response);
+      });
+
+      //   get API response
+      $.get('https://dummyjson.com/products', (res) => {
+        console.log(res);
+        console.log(res.products[0].images[0]);
+      });
+
+      //   $.post('data.txt', (res) => {
+      //     console.log(res);
+      //   });
+
+      $.get(
+        'https://www.swiggy.com/dapi/restaurants/list/v5?lat=22.30080&lng=73.20430&collection=80440&tags=layout_CCS_Idli&sortBy=&filters=&type=rcv2&offset=0&page_type=null',
+        (response) => {
+          console.log(response);
+        }
+      );
+    </script>
+  </body>
+</html>
