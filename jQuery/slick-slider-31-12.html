@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="plugins/slick-1.8.1/slick/slick.css" />
+    <link rel="stylesheet" href="plugins/slick-1.8.1/slick/slick-theme.css" />
+
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      body {
+        height: 100vh;
+        background-color: #24252e;
+        padding: 20px 100px;
+      }
+
+      .slider img {
+        height: 400px;
+        object-fit: cover;
+      }
+
+      p {
+        height: 300px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 64px;
+        font-weight: 600;
+        color: white;
+        background-color: tomato;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="slider">
+      <img
+        src="https://images.pexels.com/photos/236257/pexels-photo-236257.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load"
+        alt=""
+      />
+      <img
+        src="https://images.pexels.com/photos/4012470/pexels-photo-4012470.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load"
+        alt=""
+      />
+      <img
+        src="https://images.pexels.com/photos/10614229/pexels-photo-10614229.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load"
+        alt=""
+      />
+      <img
+        src="https://images.pexels.com/photos/2814000/pexels-photo-2814000.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load"
+        alt=""
+      />
+      <img
+        src="https://images.pexels.com/photos/45170/kittens-cat-cat-puppy-rush-45170.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+        alt=""
+      />
+      <p>This is p tag</p>
+    </div>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+      integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <script src="plugins/slick-1.8.1/slick/slick.min.js"></script>
+
+    <script>
+      $(document).ready(function () {
+        $('.slider').slick({
+          autoplay: true,
+          autoplaySpeed: 2000,
+          arrows: false,
+          dots: true,
+        });
+      });
+    </script>
+  </body>
+</html>
