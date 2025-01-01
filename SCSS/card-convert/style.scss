@@ -1,0 +1,159 @@
+// SCSS main feature list
+
+// 1. Variables + Data types + Operators
+// 2. Nesting
+// 3. Mixins
+// 4. List and Maps
+// 5. Extend
+// 6. Partials
+// 7. Functions
+// 8. Built-in modules
+// 9. Control directives
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+$card-width: 350px;
+$card-radius: 12px;
+$profile-bg-color: #2dce9d;
+
+@mixin flex-center() {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin custom-flex($dir: row, $just: start, $ai: start) {
+  display: flex;
+  flex-direction: $dir;
+  justify-content: $just;
+  align-items: $ai;
+}
+
+@mixin hover-effect() {
+  transition: all 300ms;
+  &:hover {
+    transform: translateY(-10px);
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+      rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+  }
+}
+
+@mixin custom-box() {
+  height: 300px;
+  width: 300px;
+  background-color: tomato;
+  border-radius: 12px;
+  font-size: 64px;
+  font-weight: 600;
+  color: white;
+  margin: 50px auto;
+}
+
+body {
+  //   height: 100vh;
+  background-image: linear-gradient(to right, #3af378, #26978c);
+}
+
+.card {
+  width: $card-width;
+  border-radius: $card-radius;
+  margin: 0 auto;
+  margin-top: 100px;
+  background-color: #fefefe;
+  border: 1px solid transparent;
+  position: relative;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+
+  @include hover-effect();
+
+  //   &:hover .profile {
+  //     top: -50px;
+  //   }
+  //   &:hover .footer {
+  //     bottom: -30px;
+  //   }
+
+  .profile {
+    width: 90%;
+    padding: 30px;
+    margin: 0 auto;
+    background-color: $profile-bg-color;
+    border-radius: 12px;
+    color: white;
+    // display: flex;
+    // flex-direction: column;
+    // align-items: center;
+
+    @include custom-flex(column, center, center);
+    transition: all 300ms;
+    position: absolute;
+    left: 5%;
+    top: 0;
+
+    &:hover {
+      background-color: lightgray;
+    }
+
+    .icon {
+      height: 80px;
+      width: 80px;
+      border-radius: 50%;
+      background-color: lightgray;
+      //   display: flex;
+      //   justify-content: center;
+      //   align-items: center;
+
+      @include flex-center();
+      font-size: 48px;
+      color: black;
+    }
+  }
+
+  .content {
+    margin-top: 200px;
+    margin-bottom: 50px;
+    padding: 30px;
+
+    .detail {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      color: #26978c;
+    }
+  }
+
+  .footer {
+    padding: 20px;
+    background-color: #2ece9d;
+    border-radius: 12px;
+    width: 90%;
+    margin: 0 auto;
+    font-size: 24px;
+    transition: all 300ms;
+    display: flex;
+    justify-content: space-evenly;
+    position: absolute;
+    left: 5%;
+    bottom: 0;
+  }
+}
+
+.box {
+  @include custom-box();
+  @include flex-center();
+  @include hover-effect();
+}
+
+.box2 {
+  @extend .box;
+  background-color: teal;
+}
+.box3 {
+  @extend .box2;
+  width: 500px;
+}
