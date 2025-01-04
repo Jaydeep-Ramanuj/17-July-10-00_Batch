@@ -1,0 +1,12 @@
+@use 'variables';
+@use 'mixins' as mx;
+
+.box {
+  height: 300px;
+  width: 300px;
+
+  margin: 50px auto;
+  background-color: variables.$bg-primary;
+  border-radius: variables.$primary-radius;
+  @include mx.hover-effect();
+}

@@ -1,0 +1,68 @@
+@use 'sass:math';
+
+// Variable
+
+// $variable_name:variable_value
+
+$width: 300px;
+$height: $width - 100px;
+$border-radius: 12px;
+$bg-color: tomato;
+
+// Data types
+
+$var: 10; // Number
+$var: '10'; // String
+$var: true; // Boolean
+$var: false; // Boolean
+$var: yellowgreen; // Color
+$var: 100px; // CSS units
+$var: 10%; // CSS units
+$var: 10vh; // CSS units
+$var: 10vh; // CSS units
+
+$list: 10, 20, 30, 40, 50; // Array
+
+$map: (
+  first: 1,
+  second: 2,
+  third: 3,
+); // Object
+
+// Operators
+
+// Arithmetic Operators
+
+$a: 10;
+$b: 20;
+
+@debug $a + $b;
+@debug $a - $b;
+@debug $a * $b;
+@debug $a / $b; // deprecated
+@debug math.div($a, $b);
+@debug $a % $b;
+
+// Conditional / Relational operators
+
+@debug $a < $b;
+@debug $a <= $b;
+@debug $a > $b;
+@debug $a >= $b;
+
+// Equality operators
+@debug $a == $b;
+@debug $a != $b;
+
+// Logical operators
+
+@debug $a>5 and $a<=10;
+@debug $a>5 or $a<10;
+@debug not($a<10);
+
+.box {
+  width: $width;
+  height: $height;
+  border-radius: $border-radius;
+  background-color: $bg-color;
+}

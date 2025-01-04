@@ -1,0 +1,29 @@
+@mixin boxSize($w: 300px, $h: 300px) {
+  width: $w;
+  height: $h;
+}
+
+@mixin h-center($my: 0) {
+  margin: $my auto;
+}
+
+@mixin slow($dur: 300ms) {
+  transition: all $dur;
+}
+
+@mixin hover-effect() {
+  @include slow(500ms);
+  &:hover {
+    transform: translateY(-10px);
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+      rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+  }
+}
+
+.box {
+  @include boxSize(200px, 400px);
+  border-radius: 12px;
+  background-color: tomato;
+  @include h-center(50px);
+  @include hover-effect();
+}

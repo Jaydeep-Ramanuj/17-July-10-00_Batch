@@ -1,0 +1,10 @@
+@use 'variables' as v;
+
+@mixin hover-effect() {
+  transition: all 300ms;
+  &:hover {
+    transform: translateY(-10px);
+    background-color: v.$bg-secondary;
+    color: v.$text-secondary;
+  }
+}
