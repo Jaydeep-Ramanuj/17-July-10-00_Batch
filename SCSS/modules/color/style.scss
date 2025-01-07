@@ -1,0 +1,40 @@
+@use 'sass:color';
+
+$box-color: blue;
+
+.box {
+  height: 300px;
+  width: 300px;
+  border-radius: 12px;
+  margin: 50px auto;
+
+  background-color: $box-color;
+}
+
+// .box:hover {
+//   background-color: color.adjust($box-color, $green: 100);
+// }
+
+// .box:hover {
+//   background-color: color.adjust($box-color, $lightness: 10%);
+// }
+
+// .box:hover {
+//   background-color: color.adjust($box-color, $hue: 90);
+// }
+
+// .box:hover {
+//   background-color: color.change($box-color, $alpha: 0.5);
+// }
+
+// .box:hover {
+//   background-color: color.change($box-color, $whiteness: 30%);
+// }
+
+// .box:hover {
+//   background-color: color.complement($box-color);
+// }
+
+.box:hover {
+  background-color: color.grayscale($box-color);
+}

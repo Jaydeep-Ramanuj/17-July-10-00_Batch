@@ -1,0 +1,43 @@
+li {
+  list-style-type: none;
+}
+
+li:nth-child(1)::after {
+  content: "This is sample string for string module";
+}
+
+li:nth-child(2)::after {
+  content: "something";
+}
+
+li:nth-child(3)::after {
+  content: something;
+}
+
+li:nth-child(4)::after {
+  content: 9;
+}
+
+li:nth-child(5)::after {
+  content: "This is samplenew text string for string module";
+}
+
+li:nth-child(6)::after {
+  content: 39;
+}
+
+li:nth-child(7)::after {
+  content: ["This", "is", "sample", "string", "for", "string", "module"];
+}
+
+li:nth-child(8)::after {
+  content: "THIS IS SAMPLE STRING FOR STRING MODULE";
+}
+
+li:nth-child(9)::after {
+  content: "this is uppercase string";
+}
+
+li:nth-child(10)::after {
+  content: "upx06wh";
+}/*# sourceMappingURL=style.css.map */

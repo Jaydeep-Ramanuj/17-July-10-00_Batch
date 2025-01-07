@@ -1,0 +1,21 @@
+@use 'sass:list';
+
+$numbers: 10, 20, 30, 40, 50, 60, 70, 80, 90, 100;
+
+@debug $numbers;
+
+// access element from index
+@debug list.nth($numbers, 3);
+
+// modify element at index
+@debug list.set-nth($numbers, 3, 300);
+
+// get element's index
+@debug list.index($numbers, 70);
+
+// access element from index
+@debug list.length($numbers);
+
+$temp-list: 11, 22, 33, 44, 55;
+// combine two lists
+@debug list.join($numbers, $temp-list);

@@ -1,0 +1,29 @@
+@use 'sass:map';
+
+$border-radius: (
+  xs: 3px,
+  sm: 6px,
+  md: 8px,
+  lg: 12px,
+  xl: 14px,
+  2xl: 16px,
+  3xl: 24px,
+);
+
+.box {
+  height: 300px;
+  width: 300px;
+  margin: 50px auto;
+  background-color: tomato;
+
+  //   border-radius: map.get($border-radius, sm);
+  border-radius: map.get($border-radius, lg);
+
+  @debug map.has-key($border-radius, 4xl);
+
+  @debug map.keys($border-radius);
+
+  @debug map.values($border-radius);
+
+  @debug map.remove($border-radius, 3xl);
+}

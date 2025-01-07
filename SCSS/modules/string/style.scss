@@ -1,0 +1,47 @@
+@use 'sass:string';
+
+li {
+  list-style-type: none;
+}
+
+$str: 'This is sample string for string module';
+
+li:nth-child(1)::after {
+  content: $str;
+}
+
+li:nth-child(2)::after {
+  content: string.quote(something);
+}
+
+li:nth-child(3)::after {
+  content: string.unquote('something');
+}
+
+li:nth-child(4)::after {
+  content: string.index($str, 'sample');
+}
+
+li:nth-child(5)::after {
+  content: string.insert($str, 'new text', 15);
+}
+
+li:nth-child(6)::after {
+  content: string.length($str);
+}
+
+li:nth-child(7)::after {
+  content: string.split($str, ' ');
+}
+
+li:nth-child(8)::after {
+  content: string.to-upper-case($str);
+}
+
+li:nth-child(9)::after {
+  content: string.to-lower-case('THIS IS UPPERCASE STRING');
+}
+
+li:nth-child(10)::after {
+  content: string.quote(string.unique-id());
+}
