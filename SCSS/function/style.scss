@@ -1,0 +1,34 @@
+@use 'sass:math';
+
+@mixin flex-center() {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@function findCenterValue($parentHeight, $childHeight) {
+  @return math.div($parentHeight, 2) - math.div($childHeight, 2);
+}
+
+.box {
+  height: 300px;
+  width: 700px;
+  background-color: tomato;
+  margin: 50px auto;
+  border-radius: 12px;
+
+  position: relative;
+  @include flex-center();
+
+  .inner-box {
+    height: 50px;
+    width: 50px;
+    border-radius: 6px;
+    background-color: yellowgreen;
+
+    position: absolute;
+
+    left: findCenterValue(700px, 50px);
+    top: findCenterValue(300px, 50px);
+  }
+}

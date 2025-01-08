@@ -1,0 +1,28 @@
+@use 'sass:color';
+
+// @for $i from 1 to 10 {
+//   @debug $i;
+// }
+
+@for $i from 1 through 10 {
+  @debug $i;
+}
+
+@for $i from 1 through 20 {
+  .h-#{$i * 5} {
+    height: $i * 5%;
+  }
+  .w-#{$i * 5} {
+    width: $i * 5%;
+  }
+}
+
+$colors: red, blue, green, yellow, teal, black;
+
+@each $color in $colors {
+  @for $i from 1 through 10 {
+    .bg-#{$color}-#{$i * 100} {
+      background-color: color.change($color, $whiteness: 100% - $i * 10%);
+    }
+  }
+}

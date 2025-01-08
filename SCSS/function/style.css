@@ -1,0 +1,20 @@
+.box {
+  height: 300px;
+  width: 700px;
+  background-color: tomato;
+  margin: 50px auto;
+  border-radius: 12px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.box .inner-box {
+  height: 50px;
+  width: 50px;
+  border-radius: 6px;
+  background-color: yellowgreen;
+  position: absolute;
+  left: 325px;
+  top: 125px;
+}/*# sourceMappingURL=style.css.map */

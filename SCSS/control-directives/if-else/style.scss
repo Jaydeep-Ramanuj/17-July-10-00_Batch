@@ -1,0 +1,51 @@
+@mixin transform($type: translate, $val: -10px) {
+  @if ($type== 'translateX') {
+    transform: translateX($val);
+  } @else if($type== 'translateY') {
+    transform: translateY($val);
+  } @else if($type== 'rotate') {
+    transform: rotate($val);
+  } @else if($type== 'rotateX') {
+    transform: rotateX($val);
+  } @else if($type== 'rotateY') {
+    transform: rotateY($val);
+  } @else if($type== 'scale') {
+    transform: scale($val);
+  } @else if($type== 'scaleX') {
+    transform: scaleX($val);
+  } @else if($type== 'scaleY') {
+    transform: scaleY($val);
+  } @else if($type== 'skew') {
+    transform: skew($val);
+  } @else if($type== 'skewX') {
+    transform: skewX($val);
+  } @else if($type== 'skewY') {
+    transform: skewY($val);
+  } @else {
+    transform: translate($val);
+  }
+}
+
+@mixin hover-effect() {
+  transition: all 300ms;
+  &:hover {
+    @include transform(rotate, 10deg);
+  }
+}
+
+.box {
+  $width: 400px;
+  height: 300px;
+  width: $width;
+
+  @if ($width<=300px) {
+    background-color: tomato;
+  } @else {
+    background-color: yellowgreen;
+  }
+
+  border-radius: 12px;
+  margin: 50px auto;
+
+  @include hover-effect();
+}
