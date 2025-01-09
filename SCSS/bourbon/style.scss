@@ -1,0 +1,31 @@
+@import 'bourbon/core/bourbon';
+
+.box {
+  height: 300px;
+  width: 300px;
+  border-radius: 12px;
+  background-color: tomato;
+  margin: 50px auto;
+
+  border: 3px solid;
+
+  @include border-color(red blue yellow purple);
+  @include border-top-radius(48px);
+
+  #{$all-buttons} {
+    background-color: teal;
+    border: none;
+    outline: none;
+    border-radius: 6px;
+    padding: 3px;
+    color: white;
+  }
+  #{$all-buttons-active} {
+    background-color: #00f;
+  }
+
+  &::before {
+    @include triangle('up', 2rem, 1rem, #b25c9c);
+    content: '';
+  }
+}

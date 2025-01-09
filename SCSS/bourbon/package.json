@@ -1,0 +1,9 @@
+{
+  "dependencies": {
+    "bourbon": "^7.3.0",
+    "sass": "^1.83.1"
+  },
+  "scripts": {
+    "sass": "sass --load-path=node_modules style.scss style.css --watch"
+  }
+}

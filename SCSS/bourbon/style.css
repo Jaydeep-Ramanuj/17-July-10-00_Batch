@@ -1,0 +1,32 @@
+.box {
+  height: 300px;
+  width: 300px;
+  border-radius: 12px;
+  background-color: tomato;
+  margin: 50px auto;
+  border: 3px solid;
+  border-color: red blue yellow purple;
+  border-top-left-radius: 48px;
+  border-top-right-radius: 48px;
+}
+.box button, .box [type=button], .box [type=reset], .box [type=submit] {
+  background-color: teal;
+  border: none;
+  outline: none;
+  border-radius: 6px;
+  padding: 3px;
+  color: white;
+}
+.box button:active, .box [type=button]:active, .box [type=reset]:active, .box [type=submit]:active {
+  background-color: #00f;
+}
+.box::before {
+  border-style: solid;
+  height: 0;
+  width: 0;
+  border-color: transparent transparent #b25c9c;
+  border-width: 0 1rem 1rem;
+  content: "";
+}
+
+/*# sourceMappingURL=style.css.map */
