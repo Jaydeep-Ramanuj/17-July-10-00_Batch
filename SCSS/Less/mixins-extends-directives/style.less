@@ -1,0 +1,28 @@
+.default-box(@h:300px,@w:300px,@bcg:tomato, @h-center:false,@radius:12px, @mt:false ) {
+  height: @h;
+  width: @w;
+  background-color: @bcg;
+  border-radius: @radius;
+  margin: if((@h-center = true), 0 auto, 0);
+  margin-top: if((@mt=true), 50px, 0);
+}
+
+.flex-center() {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.box {
+  .default-box(@h-center:true, @radius:48px, @mt:true);
+  .flex-center();
+
+  .inner-box {
+    .default-box(@h:100px, @w:150px, @bcg:teal, @h-center:false, @radius:12px, @mt:false);
+    .flex-center();
+  }
+}
+
+.box2 {
+  .box();
+}

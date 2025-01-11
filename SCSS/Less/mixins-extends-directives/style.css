@@ -1,0 +1,44 @@
+.box {
+  height: 300px;
+  width: 300px;
+  background-color: tomato;
+  border-radius: 48px;
+  margin: 0 auto;
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.box .inner-box {
+  height: 100px;
+  width: 150px;
+  background-color: teal;
+  border-radius: 12px;
+  margin: 0;
+  margin-top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.box2 {
+  height: 300px;
+  width: 300px;
+  background-color: tomato;
+  border-radius: 48px;
+  margin: 0 auto;
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.box2 .inner-box {
+  height: 100px;
+  width: 150px;
+  background-color: teal;
+  border-radius: 12px;
+  margin: 0;
+  margin-top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
