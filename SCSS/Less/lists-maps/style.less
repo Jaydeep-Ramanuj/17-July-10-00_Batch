@@ -1,0 +1,26 @@
+@colors: black, white, purple, teal, tomato, yellowgreen, aqua;
+
+@colors-length: length(@colors);
+
+@val: extract(@colors, 3);
+
+@numbers:range (5);
+
+.radius() {
+  xs: 4px;
+  sm: 6px;
+  md: 8px;
+  lg: 12;
+  xl: 24px;
+  xxl: 32px;
+  3xl: 48;
+}
+
+.box {
+  height: @colors-length * 1px;
+  width: 300px;
+  background-color: @val;
+  //   border-radius: 12px;
+  border-radius: .radius[sm];
+  margin: 50px auto;
+}

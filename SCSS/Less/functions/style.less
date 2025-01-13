@@ -1,0 +1,20 @@
+@w: 300px;
+@h: 300px;
+
+.box {
+  height: @h;
+  width: @w;
+
+  //   background-color: if((@w >= 300px), tomato, teal);
+
+  //   background-color: desaturate(hsl(9, 100%, 64%), 20%);
+
+  background-color: lighten(hsl(9, 100%, 64%), 20%);
+  margin: 50px auto;
+  border-radius: 12px;
+}
+
+.box::before {
+  @str: 'This is demo string';
+  content: replace(@str, 'demo', 'test');
+}

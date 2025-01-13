@@ -1,0 +1,10 @@
+.box {
+  height: 300px;
+  width: 300px;
+  background-color: hsl(9, 100%, 84%);
+  margin: 50px auto;
+  border-radius: 12px;
+}
+.box::before {
+  content: 'This is test string';
+}
