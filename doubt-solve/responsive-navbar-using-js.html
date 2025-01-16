@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <style>
+      header {
+        padding: 30px 100px;
+        display: flex;
+        justify-content: space-between;
+        font-size: 24px;
+      }
+
+      header nav a {
+        text-decoration: none;
+        color: black;
+        margin-left: 30px;
+      }
+
+      .wrapper {
+        display: none;
+      }
+
+      #toggle {
+        display: none;
+      }
+
+      #toggle:checked + .wrapper {
+        display: flex;
+      }
+
+      button {
+        margin-left: 15px;
+      }
+
+      /* @media (min-width: 768px) {
+        .wrapper {
+          display: flex;
+        }
+
+        header label {
+          display: none;
+        }
+      } */
+
+      label i {
+        display: none;
+      }
+      .show {
+        display: flex;
+      }
+
+      .side-bar {
+        position: absolute;
+        top: 70px;
+        right: 30px;
+        background-color: lightgray;
+        padding: 10px;
+        flex-direction: column;
+        gap: 20px;
+      }
+
+      nav.show {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="logo">LOGO</div>
+      <label for="toggle"><i class="bi bi-list show"></i></label>
+      <input type="checkbox" name="" id="toggle" />
+      <div class="wrapper side-bar">
+        <nav class="show">
+          <a href="#">Home</a>
+          <a href="#">Product</a>
+          <a href="#">Pricing</a>
+          <a href="#">About</a>
+          <a href="#">Contact</a>
+        </nav>
+        <button>Sign in</button>
+      </div>
+    </header>
+
+    <script>
+      console.log(window.innerWidth);
+
+      const navWrapper = document.querySelector('header .wrapper');
+      const menuIcon = document.querySelector('header label i');
+      const nav = document.querySelector('header nav');
+
+      // toggle navbar when page load / reload
+
+      //   if (window.innerWidth > 992) {
+      //     navWrapper.style.display = 'flex';
+      //     menuIcon.style.display = 'none';
+      //   }
+
+      // toggle navbar dynamically
+
+      window.addEventListener('resize', (e) => {
+        // console.log('Screen resized');
+        // console.log(e);
+        // ----------------
+        // using css style properties
+        // ----------------
+        // if (window.innerWidth > 992) {
+        //   navWrapper.style.display = 'flex';
+        //   menuIcon.style.display = 'none';
+        // } else {
+        //   navWrapper.style.display = 'none';
+        //   menuIcon.style.display = 'flex';
+        // }
+        // ----------------
+        // using class
+        // ----------------
+
+        toggleMenuBar();
+      });
+
+      //   toggle nav upon btn pressed
+      menuIcon.addEventListener('click', () => {
+        navWrapper.classList.toggle('show');
+        // navWrapper.classList.remove('side-bar');
+      });
+
+      // function to chnage navbar based on innerWidth
+
+      function toggleMenuBar() {
+        if (window.innerWidth > 992) {
+          navWrapper.classList.add('show');
+          navWrapper.classList.remove('side-bar');
+          menuIcon.classList.remove('show');
+          nav.classList.remove('show');
+        } else {
+          navWrapper.classList.remove('show');
+          navWrapper.classList.add('side-bar');
+          menuIcon.classList.add('show');
+          nav.classList.add('show');
+        }
+      }
+    </script>
+  </body>
+</html>
